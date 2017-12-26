@@ -57,14 +57,13 @@ function postMessage(request) {
 
   body = {
     "bot_id" : botID,
-    "text" : image_getter.getURL("Placeholder")
-   //"text" : botResponse,
-    // "attachments" : [
-    //   {
-    //     "type" : "image",
-    //     "url" : image_getter.getURL("Placeholder")
-    //   }
-    // ]
+    "text" : botResponse,
+    "attachments" : [
+       {
+         "type" : "image",
+         "url" : image_getter.getURL("Placeholder")
+       }
+     ]
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
