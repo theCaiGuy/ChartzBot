@@ -1,13 +1,17 @@
-function ImageService() {
-    //this.HTTPS = require('https');
-    //this.botID = process.env.botID;
-    //this.authID = process.env.authID;
+function getURL(imageName) {
+     return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
 }
 
-// Returns a GroupMe image URL
-ImageService.prototype.getURL = function(imageName) {
-    return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
-};
+// function ImageService() {
+//     //this.HTTPS = require('https');
+//     //this.botID = process.env.botID;
+//     //this.authID = process.env.authID;
+// }
+
+// // Returns a GroupMe image URL
+// ImageService.prototype.getURL = function(imageName) {
+//     return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
+// };
 
 module.exports = ImageService;
 

@@ -57,7 +57,8 @@ function postMessage(request) {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse,
+    "text" : image_getter.getURL("Placeholder")
+   //"text" : botResponse,
     // "attachments" : [
     //   {
     //     "type" : "image",
