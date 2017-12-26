@@ -22,8 +22,7 @@ function postMessage(request) {
   var botResponse, options, body, botReq;
 
   if (request.text.length <= 8) botResponse = "Usage: Show me <song title>";
-
-  botResponse = "Here's your song: " + request.text.substring(8);
+  else botResponse = "Here's your song: " + request.text.substring(8);
 
   options = {
     hostname: 'api.groupme.com',
