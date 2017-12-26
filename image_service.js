@@ -5,5 +5,17 @@ export class ImageService {
 
     constructor() {}
 
-    
+    getImageURL(imagePath) {
+        options = {
+            hostname: 'image.groupme.com',
+            path: '/pictures',
+            method: 'POST'
+        };
+        
+        body = {
+            "access_token" : authID,
+
+        };
+    }
+
 }
