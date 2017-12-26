@@ -19,16 +19,19 @@ function respond() {
 }
 
 function postMessage(request) {
-  var botResponse, options, body, botReq;
+  var botResponse, options, body, botReq, defaultResponse;
 
-  if (request.text.length <= 8) botResponse = "Usage: 'Show me <song title> | help | info'";
+  defaultResponse = "Usage: \"Show me <song title> | help | info | list\"";
+
+  if (request.text.length <= 8) botResponse = defaultResponse;
   else {
     song_title = request.text.substring(8);
-    if (song_title == "help") {
+    if (song_title == "list") {
       botResponse = "Here's what I've got: \n"
       botResponse = botResponse + "Lucretia\n";
       botResponse = botResponse + "ARN\n";
       botResponse = botResponse + "Banner\n"
+      botResponse = botResponse + defaultResponse;
     } else if (song_title == "info") {
       botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
       botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
@@ -37,7 +40,11 @@ function postMessage(request) {
       botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
       botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
       botResponse = botResponse + "All charts can be found at https://drive.google.com/drive/folders/0BxPTAb-07dorUG5EQU5ENmJ5Mm8\n"
-      botResponse = botResponse + "For more information visit https://dev.groupme.com/"
+      botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
+      botResponse = botResponse + defaultResponse;
+    } else if (song_title == "help") {
+      botResponse = "Retrieves the indicated chart\n"
+      botResponse = botResponse + defaultResponse;
     } else {
       botResponse = "Here's your song: " + request.text.substring(8);
     }
