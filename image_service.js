@@ -1,7 +1,7 @@
 function ImageService() {
-    this.HTTPS = require('https');
-    this.botID = process.env.botID;
-    this.authID = process.env.authID;
+    //this.HTTPS = require('https');
+    //this.botID = process.env.botID;
+    //this.authID = process.env.authID;
 }
 
 // Returns a GroupMe image URL
