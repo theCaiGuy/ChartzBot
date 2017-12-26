@@ -1,6 +1,11 @@
-function getURL(imageName) {
-     return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
-}
+module.exports = {
+    getURL: function(imageName) {
+        return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
+   }
+};
+
+
+//exports.getURL = getURL;
 
 // function ImageService() {
 //     //this.HTTPS = require('https');
@@ -13,7 +18,7 @@ function getURL(imageName) {
 //     return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
 // };
 
-module.exports = ImageService;
+//module.exports = ImageService;
 
 // export class ImageService {
 //     HTTPS = require('https');
