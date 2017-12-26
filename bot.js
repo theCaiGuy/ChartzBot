@@ -25,7 +25,10 @@ function postMessage(request) {
   else {
     song_title = request.text.substring(8);
     if (song_title == "help") {
-      botResponse = "Here's what I've got: "
+      botResponse = "Here's what I've got: \n"
+      botResponse = botResponse + "Lucretia\n";
+      botResponse = botResponse + "ARN\n";
+      botResponse = botResponse + "Banner\n"
     } else {
       botResponse = "Here's your song: " + request.text.substring(8);
     }
