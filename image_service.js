@@ -8,12 +8,12 @@ export class ImageService {
     db;
 
     constructor() {
-        MongoClient.connect(process.env.MONGODB_URI, function(err, client) {
-            assert.equal(null, err);
-            console.log("Connected successfully to mongodb");
-            db = client.db(mongo_name);
-            client.close();
-        });
+        //MongoClient.connect(process.env.MONGODB_URI, function(err, client) {
+        //    assert.equal(null, err);
+        //    console.log("Connected successfully to mongodb");
+        //    db = client.db(mongo_name);
+        //    client.close();
+        //});
     }
 
     getImageURL(imagePath) {
