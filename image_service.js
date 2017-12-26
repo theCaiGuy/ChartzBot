@@ -16,17 +16,18 @@ export class ImageService {
         //});
     }
 
-    getImageURL(imagePath) {
-        options = {
-            hostname: 'image.groupme.com',
-            path: '/pictures',
-            method: 'POST'
-        };
+    getImageURL(imageName) {
+        //options = {
+        //    hostname: 'image.groupme.com',
+        //    path: '/pictures',
+        //    method: 'POST'
+        //};
         
-        body = {
-            "access_token" : authID,
+       // body = {
+        //    "access_token" : authID,
 
-        };
+       // };
+       return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
     }
 
 }

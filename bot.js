@@ -1,5 +1,8 @@
+import './image_service';
+
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
+var imageGetter = require('ImageService');
 //image_service = require('./image_service.js');
 
 var botID = process.env.BOT_ID;
