@@ -60,7 +60,7 @@ function postMessage(request) {
     "attachments" : [
       {
         "type" : "image",
-        "url" : "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009"
+        "url" : ImageService.getURL("Placeholder")
       }
     ]
   };
