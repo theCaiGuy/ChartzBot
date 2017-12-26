@@ -1,7 +1,9 @@
+import './image_service.js';
+
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-
 var botID = process.env.BOT_ID;
+var image_service = new ImageService();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
