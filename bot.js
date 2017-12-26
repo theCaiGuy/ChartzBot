@@ -21,7 +21,7 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
-  if (request.text.length <= 8) botResponse = "Usage: 'Show me <song title> | help'";
+  if (request.text.length <= 8) botResponse = "Usage: 'Show me <song title> | help | info'";
   else {
     song_title = request.text.substring(8);
     if (song_title == "help") {
