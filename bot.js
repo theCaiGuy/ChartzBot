@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^Hey bot */;
+      botRegex = /^Show me*/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -21,9 +21,9 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
+  if (request.text.length <= 9) botResponse = "Usage: Show me <song title>";
 
-
-  botResponse = "Here's your request: " + request.text;
+  botResponse = "Here's your song: " + request.text.substring(9);
 
   options = {
     hostname: 'api.groupme.com',
