@@ -29,6 +29,10 @@ function postMessage(request) {
       botResponse = botResponse + "Lucretia\n";
       botResponse = botResponse + "ARN\n";
       botResponse = botResponse + "Banner\n"
+    } else if (song_title == "info") {
+      botResponse = "LSJUMB Altoz Practice Bot\n"
+      botResponse = botResponse + "Created using resources available at https://dev.groupme.com in December 2017\n"
+      botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting"
     } else {
       botResponse = "Here's your song: " + request.text.substring(8);
     }
