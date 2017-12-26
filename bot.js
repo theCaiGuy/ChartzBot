@@ -1,8 +1,8 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
-//var ImageService = require('./image_service.js');
-var image_getter = new ImageService();
+var image_getter = require('./image_service.js');
+//var image_getter = new ImageService();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
