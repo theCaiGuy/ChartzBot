@@ -21,9 +21,9 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
-  if (request.text.length <= 9) botResponse = "Usage: Show me <song title>";
+  if (request.text.length <= 8) botResponse = "Usage: Show me <song title>";
 
-  botResponse = "Here's your song: " + request.text.substring(9);
+  botResponse = "Here's your song: " + request.text.substring(8);
 
   options = {
     hostname: 'api.groupme.com',
