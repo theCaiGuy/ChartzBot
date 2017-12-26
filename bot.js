@@ -31,17 +31,16 @@ function postMessage(request) {
       botResponse = botResponse + "Lucretia\n";
       botResponse = botResponse + "ARN\n";
       botResponse = botResponse + "Banner\n"
-      botResponse = botResponse + defaultResponse;
     } else if (song_title == "info") {
       botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
       botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
       botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
+      botResponse = botResponse + defaultResponse + "\n";
       botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
       botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
       botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
       botResponse = botResponse + "All charts can be found at https://drive.google.com/drive/folders/0BxPTAb-07dorUG5EQU5ENmJ5Mm8\n"
       botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
-      botResponse = botResponse + defaultResponse;
     } else if (song_title == "help") {
       botResponse = "Retrieves the indicated chart\n"
       botResponse = botResponse + defaultResponse;
