@@ -39,7 +39,7 @@ function postMessage(request) {
       botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
       botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
       botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
-      botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
+      //botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
       botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
     } else if (song_title == "help") {
       botResponse = "Retrieves the indicated chart\n"
