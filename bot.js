@@ -45,7 +45,7 @@ function postMessage(request) {
       botResponse = "Retrieves the indicated chart\n"
       botResponse = botResponse + defaultResponse;
     } else {
-      botResponse = "Here's your song: " + request.text.substring(8);
+      botResponse = "Here's your song: " + song_title;
     }
   }
   options = {
@@ -60,7 +60,7 @@ function postMessage(request) {
     "attachments" : [
        {
          "type" : "image",
-         "url" : image_getter.getURL("Placeholder")
+         "url" : "https://www.rd.com/wp-content/uploads/2016/11/11-Health-Secrets-Your-Butt_Knife_33339954_g-stockstudio.jpg" //image_getter.getURL("Placeholder")
        }
      ]
   };
