@@ -2,7 +2,6 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 var image_getter = require('./image_service.js');
-//var image_getter = new ImageService();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -40,7 +39,7 @@ function postMessage(request) {
       botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
       botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
       botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
-      botResponse = botResponse + "All charts can be found at https://drive.google.com/drive/folders/0BxPTAb-07dorUG5EQU5ENmJ5Mm8\n"
+      botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
       botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
     } else if (song_title == "help") {
       botResponse = "Retrieves the indicated chart\n"
