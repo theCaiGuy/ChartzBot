@@ -29,5 +29,5 @@ server.listen(port);
 
 function ping() {
   this.res.writeHead(200);
-  this.res.end("Looks like you've found LSJUMB Altoz Practice Bot!");
+  this.res.end("Looks like you've found LSJUMB Altoz Practice Bot! Hooray for you! Altoz<3");
 }
