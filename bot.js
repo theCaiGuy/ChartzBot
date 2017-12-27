@@ -60,7 +60,7 @@ function postMessage(request) {
     "attachments" : [
        {
          "type" : "image",
-         "url" : "https://www.rd.com/wp-content/uploads/2016/11/11-Health-Secrets-Your-Butt_Knife_33339954_g-stockstudio.jpg" //image_getter.getURL("Placeholder")
+         "url" : ""//image_getter.getURL("Placeholder")
        }
      ]
   };
