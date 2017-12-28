@@ -1,4 +1,4 @@
-urls = {
+url = {
 	"songs":
 	[
 		{
@@ -443,9 +443,8 @@ urls = {
 
 module.exports = {
     getURL: function(imageName) {
-        songs_array = urls.songs;
-        for (var i = 0; i < songs_array.length; i++) {
-            if (songs[i].title = imageName) return songs[i].url;
+        for (var i = 0; i < url.songs.length; i++) {
+            if (url.songs[i].title == imageName) return url.songs[i].url;
         }
         return "https://i.groupme.com/2254x1650.jpeg.4f8b88fbea9c47a3a5bbea7a01274706";
     }
