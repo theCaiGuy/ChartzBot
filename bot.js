@@ -25,6 +25,7 @@ function postMessage(request) {
 
   if (request.text.length <= 8) {
     botResponse = defaultResponse;
+  }
   else {
     song_title = request.text.substring(8);
     if (song_title == "list") {
