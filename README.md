@@ -6,13 +6,13 @@ GroupMe Bot that, once complete, will deliver LSJUMB Altoz charts upon request
 
 2. Convert all PDF files into jpeg images
 ```
-mkdir Newimage
-for filename in *.pdf; do convert -density 300 -depth 8 -quality 85 "$filename" "Newimage/${filename%.*}.jpg"; done
+$ mkdir Newimage
+$ for filename in *.pdf; do convert -density 300 -depth 8 -quality 85 "$filename" "Newimage/${filename%.*}.jpg"; done
 ```
 
 3. Locally obtain all groupme image service URLs for chartz for later use
 ```
-python groupme-image-service.py
+$ python groupme-image-service.py
 ```
 
 # More Information:
