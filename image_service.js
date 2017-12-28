@@ -434,9 +434,11 @@ module.exports = {
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
         imageName - imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
+        var possibleURL = "";
         for (var i = 0; i < url.songs.length; i++) {
             if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'') == imageName) return url.songs[i].url;
+            else if (url.songs[i].title.toLowerCase() != -1) possibleURL = url.songs[i].url;
         }
-        return "";
+        return possibleURL;
     }
 };
