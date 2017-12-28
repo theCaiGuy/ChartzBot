@@ -367,7 +367,7 @@ url = {
 		},
         {
             "title": "list",
-            "url": "https://i.groupme.com/1072x1520.png.5c0630328f9447de85e0df5833219fc1"
+            "url": "https://i.groupme.com/1036x1522.png.1cf2f6c9b0f04ddcb2e37fae151c5a39"
         }
 	]
 };
@@ -375,14 +375,14 @@ url = {
 
 module.exports = {
     getList: function() {
-        return "https://i.groupme.com/1072x1520.png.5c0630328f9447de85e0df5833219fc1";
+        return "https://i.groupme.com/1036x1522.png.1cf2f6c9b0f04ddcb2e37fae151c5a39";
     },
 
     getURL: function(imageName) {
         if (imageName.toLowerCase() == "arn") imageName = "All Right Now";
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
-        imageName = imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
+        imageName = imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()']/g,'');
         var possibleURL = "";
         for (var i = 0; i < url.songs.length; i++) {
             if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'') == imageName) return url.songs[i].url;
