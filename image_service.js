@@ -382,7 +382,7 @@ module.exports = {
         if (imageName.toLowerCase() == "arn") imageName = "All Right Now";
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
-        imageName - imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
+        imageName = imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
         var possibleURL = "";
         for (var i = 0; i < url.songs.length; i++) {
             if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'') == imageName) return url.songs[i].url;

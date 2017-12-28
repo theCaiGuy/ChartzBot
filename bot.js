@@ -48,7 +48,7 @@ function postMessage(request) {
     } else {
       song_url = image_getter.getURL(song_title)
       if (song_url == "") {
-        botResponse = "Sorry, I couldn't find your chart. Try \'Show me list\' for a list of all the chartz I have";
+        botResponse = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have";
       } else {
         botResponse = "Here's your song: " + song_title;
       }
