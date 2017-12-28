@@ -30,7 +30,7 @@ function postMessage(request) {
   else {
     song_title = request.text.substring(8);
     if (song_title == "list") {
-      botResponse = "Here's what I've got: \n"
+      botResponse = "Choose any chart from this list:\n"
       song_url = image_getter.getList();
     } else if (song_title == "info") {
       botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
@@ -43,12 +43,16 @@ function postMessage(request) {
       botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
       botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
     } else if (song_title == "help") {
-      botResponse = "Retrieves the indicated chart\n"
-      botResponse = botResponse + defaultResponse;
+      botResponse = "\'Show me <song title>\' to retrieve the indicated chart\n";
+      botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
+      botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
+      botResponse = botResponse + "Note: For whatever reason, Practice Bot does not handle apostrophes well. Please do not use apostrophes!";
+    } else if (song_title == "a surprise") {
+      botResponse = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
     } else {
       song_url = image_getter.getURL(song_title)
       if (song_url == "") {
-        botResponse = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have";
+        botResponse = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
       } else {
         botResponse = "Here's your song: " + song_title;
       }
