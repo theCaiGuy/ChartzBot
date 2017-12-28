@@ -6,10 +6,6 @@ url = {
 			"url": "https://i.groupme.com/2250x1650.jpeg.950ee5dc46c54f6a8d02a7c1234037b8"
 		},
 		{
-			"title": "Fall 2016 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.28dafa79ffab49919f916de1dfc66192"
-		},
-		{
 			"title": "RoughGemMedium",
 			"url": "https://i.groupme.com/1650x2250.jpeg.f9c3814fc5ad432da45eb1ab0857e438"
 		},
@@ -38,10 +34,6 @@ url = {
 			"url": "https://i.groupme.com/2250x1650.jpeg.7930114d8ce84786844de2b7749e8958"
 		},
 		{
-			"title": "Fall 2016 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.8cd89d12a02248648f2ac4fafcacd75e"
-		},
-		{
 			"title": "Dirty Little Secret",
 			"url": "https://i.groupme.com/2250x1650.jpeg.d8702079d21c46558229eebc1faea7f6"
 		},
@@ -52,10 +44,6 @@ url = {
 		{
 			"title": "Como Ves",
 			"url": "https://i.groupme.com/2250x1654.jpeg.2360245c26334e4fb0ed29f42714bc01"
-		},
-		{
-			"title": "Fall 2016 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.dba0dfc445bc4c3380e802f8932f9f4a"
 		},
 		{
 			"title": "Welcome to the Black Parade",
@@ -170,10 +158,6 @@ url = {
 			"url": "https://i.groupme.com/2250x1650.jpeg.d113fbe487ae42808ef287b4bd15c3d9"
 		},
 		{
-			"title": "Fall 2015 Teazers 3",
-			"url": "https://i.groupme.com/2250x1650.jpeg.07f1c2cec1994dd0882ea11f0ba83221"
-		},
-		{
 			"title": "Peace of Mind",
 			"url": "https://i.groupme.com/2254x1654.jpeg.bbf19488b8d1456b934fc500fe17e212"
 		},
@@ -214,14 +198,6 @@ url = {
 			"url": "https://i.groupme.com/2254x1654.jpeg.045f0c8575a04837923d98e8b28868c4"
 		},
 		{
-			"title": "Fall 2017 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.e23cf1294a8246ad9660df2c80054459"
-		},
-		{
-			"title": "Fall 2017 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.7ce0d7dce9a54d019e782f4968381d2d"
-		},
-		{
 			"title": "Hey Big Brother",
 			"url": "https://i.groupme.com/2254x1654.jpeg.6cfa49f0d73b4369890874ce5cc43024"
 		},
@@ -256,14 +232,6 @@ url = {
 		{
 			"title": "Holiday",
 			"url": "https://i.groupme.com/2250x1650.jpeg.360eca8e58cc447d9b04e67f16ee864d"
-		},
-		{
-			"title": "Fall 2017 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.0d2d25f7a2e645579c0cdb3c189f0fde"
-		},
-		{
-			"title": "Fall 2017 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.a8eb2b0cf40f413eb62df80b3a5b9d00"
 		},
 		{
 			"title": "Radar Love",
@@ -302,14 +270,6 @@ url = {
 			"url": "https://i.groupme.com/2250x1650.jpeg.6a23f0aacecd4cb6ba6d430eb3d7cd2c"
 		},
 		{
-			"title": "Fall 2015 Teazers 1",
-			"url": "https://i.groupme.com/2250x1650.jpeg.8d043576ad3f49c3a929c3937f1050f7"
-		},
-		{
-			"title": "Fall 2015 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.1d773c46cc3d4bf0b39fea435d8fa629"
-		},
-		{
 			"title": "fingering chart",
 			"url": "https://i.groupme.com/2250x1650.jpeg.87f95c372cd3485bb0b0ef588a271fde"
 		},
@@ -322,10 +282,6 @@ url = {
 			"url": "https://i.groupme.com/2250x1650.jpeg.84f5d7246f5e4ae7b6e190bae279553b"
 		},
 		{
-			"title": "Fall 2015 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.404cd0773f8a451395f5df3ed1906cf4"
-		},
-		{
 			"title": "Longview",
 			"url": "https://i.groupme.com/2250x1650.jpeg.7ba81329ce114aa681d9db2a5a4234dd"
 		},
@@ -336,10 +292,6 @@ url = {
 		{
 			"title": "Down to the Nightclub",
 			"url": "https://i.groupme.com/2254x1654.jpeg.fac4f69592a84c33bf73df59b257c342"
-		},
-		{
-			"title": "Fall 2015 Teazers",
-			"url": "https://i.groupme.com/2250x1650.jpeg.6b3c0caed73b40fe9b073b6262be1697"
 		},
 		{
 			"title": "Basket Case",
@@ -380,10 +332,6 @@ url = {
 		{
 			"title": "All Right Now (Victory Mix)",
 			"url": "https://i.groupme.com/2254x1650.jpeg.3eb63a44926441b789188eaa3c7fc01c"
-		},
-		{
-			"title": "Fall 2015 Teazers 2",
-			"url": "https://i.groupme.com/2250x1650.jpeg.04a994413eb24495a80e5b91f725b640"
 		},
 		{
 			"title": "Ruby Soho",
@@ -431,6 +379,7 @@ module.exports = {
     },
 
     getURL: function(imageName) {
+        if (imageName.toLowerCase() == "arn") imageName = "All Right Now";
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
         imageName - imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
