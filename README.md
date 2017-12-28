@@ -1,7 +1,7 @@
-#Overview:
+# Overview:
 GroupMe Bot that, once complete, will deliver LSJUMB Altoz charts upon request
 
-#Steps for uploading new chartz:
+# Steps for uploading new chartz:
 1. Download PDF chartz from online folder and save to local directory
 2. run command
 ```
@@ -14,7 +14,7 @@ python groupme-image-service.py
 ```
 to locally obtain all groupme image service URLs for chartz
 
-#More Information:
+# More Information:
 GroupMe API info: https://dev.groupme.com
 
 Deployed using heroku: https://heroku.com
