@@ -2,25 +2,25 @@
 GroupMe Bot that, once complete, will deliver LSJUMB Altoz charts upon request
 
 # Commands:
+Searches for a chart of your song or uses string ops to try to guess which chart you're looking for
 ```
 Show me [song]
 ```
-Searches for a chart of your song or uses string ops to try to guess which chart you're looking for
 
+Returns a list of available chartz
 ```
 Show me list
 ```
-Returns a list of available chartz
 
+Returns troubleshooting tips
 ```
 Show me help
 ```
-Returns troubleshooting tips
 
+For a surprise :D
 ```
 Show me a surprise
 ```
-For a surprise :D
 
 # Steps for uploading new chartz:
 1. Download PDF chartz from online folder and save to local directory
