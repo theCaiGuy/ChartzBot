@@ -58,7 +58,7 @@ url = {
 			"url": "https://i.groupme.com/2250x1650.jpeg.dba0dfc445bc4c3380e802f8932f9f4a"
 		},
 		{
-			"title": "Welcome to the Black Parade Altoz",
+			"title": "Welcome to the Black Parade",
 			"url": "https://i.groupme.com/2250x1650.jpeg.b6947b392a094c728225411246901ccb"
 		},
 		{
@@ -453,8 +453,9 @@ module.exports = {
     getURL: function(imageName) {
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
+        imageName - imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
         for (var i = 0; i < url.songs.length; i++) {
-            if (url.songs[i].title.toLowerCase().replace(/\s+/g, '') == imageName) return url.songs[i].url;
+            if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'') == imageName) return url.songs[i].url;
         }
         return "";
     }
