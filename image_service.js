@@ -383,6 +383,7 @@ module.exports = {
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
         imageName = imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\']/g,'');
+        imageName = imageName.replace(/'/g, '');
         var possibleURL = "";
         for (var i = 0; i < url.songs.length; i++) {
             if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'') == imageName) return url.songs[i].url;
