@@ -46,7 +46,6 @@ function postMessage(request) {
       botResponse = "\'Show me <song title>\' to retrieve the indicated chart\n";
       botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
       botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
-      botResponse = botResponse + "Note: For whatever reason, Practice Bot does not handle apostrophes well. Please do not use apostrophes!";
     } else if (song_title == "a surprise") {
       botResponse = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
     } else {
