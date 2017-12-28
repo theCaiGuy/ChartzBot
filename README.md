@@ -10,7 +10,7 @@ $ mkdir Newimage
 $ for filename in *.pdf; do convert -density 300 -depth 8 -quality 85 "$filename" "Newimage/${filename%.*}.jpg"; done
 ```
 
-3. Locally obtain all groupme image service URLs for chartz for later use (contact me for python script)
+3. Locally obtain all groupme image service URLs for chartz for later use
 ```
 $ python groupme-image-service.py
 ```
