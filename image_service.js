@@ -58,7 +58,7 @@ url = {
 			"url": "https://i.groupme.com/2250x1650.jpeg.dba0dfc445bc4c3380e802f8932f9f4a"
 		},
 		{
-			"title": "Welcome to the Black Parade Altoz.jpg",
+			"title": "Welcome to the Black Parade Altoz",
 			"url": "https://i.groupme.com/2250x1650.jpeg.b6947b392a094c728225411246901ccb"
 		},
 		{
@@ -436,18 +436,18 @@ url = {
 		{
 			"title": "Golgi Apparatus",
 			"url": "https://i.groupme.com/2250x1654.jpeg.2d7b525d298e4211a4c9ecef686eb7a9"
-		}
+        },
+        {
+            "title": "list",
+            "url": "https://i.groupme.com/1144x1556.png.45f21e00f6b047baa86a23c575b9012c"
+        }
 	]
 };
 
 
 module.exports = {
     getList: function() {
-        var songlist;
-        for (var i = 0; i < url.songs.length; i++) {
-            songlist = songlist + url.songs[i].title + "\n";
-        }
-        return songlist;
+        return "https://i.groupme.com/1144x1556.png.45f21e00f6b047baa86a23c575b9012c";
     },
 
     getURL: function(imageName) {
