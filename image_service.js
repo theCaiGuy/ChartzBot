@@ -210,10 +210,6 @@ url = {
 			"url": "https://i.groupme.com/2250x1654.jpeg.403233751790416083c97818e5603563"
 		},
 		{
-			"title": "Brooklyn",
-			"url": "https://i.groupme.com/2550x3300.jpeg.2ce7f4667d33435ebe27dff6e8e42235"
-		},
-		{
 			"title": "Welcome to Paradise",
 			"url": "https://i.groupme.com/2254x1654.jpeg.045f0c8575a04837923d98e8b28868c4"
 		},
@@ -228,10 +224,6 @@ url = {
 		{
 			"title": "Hey Big Brother",
 			"url": "https://i.groupme.com/2254x1654.jpeg.6cfa49f0d73b4369890874ce5cc43024"
-		},
-		{
-			"title": "Brooklyn",
-			"url": "https://i.groupme.com/2550x3300.jpeg.9ce8604684794d09b8290eba4a5dc254"
 		},
 		{
 			"title": "What is Hip",
@@ -295,7 +287,7 @@ url = {
 		},
 		{
 			"title": "Golgi Apparatus",
-			"url": "https://i.groupme.com/2250x1654.jpeg.76e5391120714bd6928c79dbeadfa673"
+			"url": "https://i.groupme.com/1936x1416.png.3f1a61ff4ff847e59967cd6f6ad644f7"
 		},
 		{
 			"title": "Rubberband Man",
@@ -312,10 +304,6 @@ url = {
 		{
 			"title": "Fall 2015 Teazers 1",
 			"url": "https://i.groupme.com/2250x1650.jpeg.8d043576ad3f49c3a929c3937f1050f7"
-		},
-		{
-			"title": "Golgi Apparatus",
-			"url": "https://i.groupme.com/2250x1654.jpeg.8080fd74b1074aa9a1880911330af544"
 		},
 		{
 			"title": "Fall 2015 Teazers",
@@ -410,10 +398,6 @@ url = {
 			"url": "https://i.groupme.com/2254x1650.jpeg.e5f47f152d0c4731a8895171efe12f98"
 		},
 		{
-			"title": "Golgi Apparatus",
-			"url": "https://i.groupme.com/2250x1654.jpeg.3f21fc160bae44d28c1f042e08125ee9"
-		},
-		{
 			"title": "Rough Gem",
 			"url": "https://i.groupme.com/2250x1650.jpeg.47e1f348e42142e3921ca73df451b406"
 		},
@@ -433,13 +417,9 @@ url = {
 			"title": "Higher Ground",
 			"url": "https://i.groupme.com/2250x1650.jpeg.d02f597c762449c69178e386cbc7f952"
 		},
-		{
-			"title": "Golgi Apparatus",
-			"url": "https://i.groupme.com/2250x1654.jpeg.2d7b525d298e4211a4c9ecef686eb7a9"
-        },
         {
             "title": "list",
-            "url": "https://i.groupme.com/1144x1556.png.45f21e00f6b047baa86a23c575b9012c"
+            "url": "https://i.groupme.com/1072x1520.png.5c0630328f9447de85e0df5833219fc1"
         }
 	]
 };
@@ -447,7 +427,7 @@ url = {
 
 module.exports = {
     getList: function() {
-        return "https://i.groupme.com/1144x1556.png.45f21e00f6b047baa86a23c575b9012c";
+        return "https://i.groupme.com/1072x1520.png.5c0630328f9447de85e0df5833219fc1";
     },
 
     getURL: function(imageName) {
