@@ -442,9 +442,18 @@ url = {
 
 
 module.exports = {
-    getURL: function(imageName) {
+    getList: function() {
+        var songlist;
         for (var i = 0; i < url.songs.length; i++) {
-            if (url.songs[i].title == imageName) return url.songs[i].url;
+            songlist = songlist + url.songs[i].title + "\n";
+        }
+        return songlist;
+    },
+
+    getURL: function(imageName) {
+        imageName = imageName.toLowerCase();
+        for (var i = 0; i < url.songs.length; i++) {
+            if (url.songs[i].title.toLowerCase() == imageName) return url.songs[i].url;
         }
         return "";
     }
