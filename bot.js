@@ -60,7 +60,7 @@ function postMessage(request) {
     "attachments" : [
        {
          "type" : "image",
-         "url" : ""//image_getter.getURL("Placeholder")
+         "url" : image_getter.getURL("Ruby Soho")
        }
      ]
   };

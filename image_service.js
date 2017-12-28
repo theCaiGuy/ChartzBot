@@ -7,6 +7,6 @@ var mongoName = 'ds131687/heroku_ht08rkq2';
 
 module.exports = {
     getURL: function(imageName) {
-        return "https://i.groupme.com/480x325.jpeg.9e20b71dd6af4b58bbd132d4a7dec009";
+        return "https://i.groupme.com/2250x1650.jpeg.7928c292e49f4019811df0f5ba9d62b9";
     }
 };
