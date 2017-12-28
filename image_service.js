@@ -452,8 +452,9 @@ module.exports = {
 
     getURL: function(imageName) {
         imageName = imageName.toLowerCase();
+        imageName = imageName.replace(/\s+/g, '');
         for (var i = 0; i < url.songs.length; i++) {
-            if (url.songs[i].title.toLowerCase() == imageName) return url.songs[i].url;
+            if (url.songs[i].title.toLowerCase().replace(/\s+/g, '') == imageName) return url.songs[i].url;
         }
         return "";
     }
