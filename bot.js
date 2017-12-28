@@ -19,12 +19,13 @@ function respond() {
 }
 
 function postMessage(request) {
-  var botResponse, options, body, botReq, defaultResponse, song_title;
+  var botResponse, options, body, botReq, defaultResponse, song_title, song_url;
 
   defaultResponse = "Usage: \"Show me <song title> | help | info | list\"";
 
   if (request.text.length <= 8) {
     botResponse = defaultResponse;
+    song_url = "";
   }
   else {
     song_title = request.text.substring(8);
@@ -47,7 +48,12 @@ function postMessage(request) {
       botResponse = "Retrieves the indicated chart\n"
       botResponse = botResponse + defaultResponse;
     } else {
-      botResponse = "Here's your song: " + song_title;
+      song_url = image_getter.getURL(song_title)
+      if (song_url == "") {
+        botResponse = "Sorry, I couldn't find your chart. Try \'Show me list\' for a list of all the chartz I have";
+      } else {
+        botResponse = "Here's your song: " + song_title;
+      }
     }
   }
   options = {
@@ -62,7 +68,7 @@ function postMessage(request) {
     "attachments" : [
        {
          "type" : "image",
-         "url" : image_getter.getURL(song_title)
+         "url" : song_url
        }
      ]
   };
