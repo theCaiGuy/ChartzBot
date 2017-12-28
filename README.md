@@ -6,6 +6,7 @@ GroupMe Bot that, once complete, will deliver LSJUMB Altoz charts upon request
 
 2. Convert all PDF files into jpeg images
 ```
+mkdir Newimage
 for filename in *.pdf; do convert -density 300 -depth 8 -quality 85 "$filename" "Newimage/${filename%.*}.jpg"; done
 ```
 
