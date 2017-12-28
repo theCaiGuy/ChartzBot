@@ -19,11 +19,12 @@ function respond() {
 }
 
 function postMessage(request) {
-  var botResponse, options, body, botReq, defaultResponse;
+  var botResponse, options, body, botReq, defaultResponse, song_title;
 
   defaultResponse = "Usage: \"Show me <song title> | help | info | list\"";
 
-  if (request.text.length <= 8) botResponse = defaultResponse;
+  if (request.text.length <= 8) {
+    botResponse = defaultResponse;
   else {
     song_title = request.text.substring(8);
     if (song_title == "list") {
@@ -60,7 +61,7 @@ function postMessage(request) {
     "attachments" : [
        {
          "type" : "image",
-         "url" : image_getter.getURL("Ruby Soho")
+         "url" : image_getter.getURL(song_title)
        }
      ]
   };
