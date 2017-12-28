@@ -39,11 +39,15 @@ $ curl https://image.groupme.com/pictures -X "POST" -H "X-Access-Token: [token]"
 4. Update the urls JSON variable in the image_service.js file with your new song and url
 ```
 url = {
+    "songs": 
+    [
     ...
-    {
-        "title": [your_song],
-        "url": [your_url]
-    },
+        {
+            "title": [your_song],
+            "url": [your_url]
+        },
+    ...
+    ]
 }
 ```
 
