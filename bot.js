@@ -21,7 +21,7 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq, defaultResponse, song_title, song_url;
 
-  defaultResponse = "Usage: \"Show me <song title> | help | info | list\"";
+  defaultResponse = "Usage: \'Show me <song title> | help | info | list\'";
 
   if (request.text.length <= 8) {
     botResponse = defaultResponse;
@@ -31,7 +31,7 @@ function postMessage(request) {
     song_title = request.text.substring(8);
     if (song_title == "list") {
       botResponse = "Here's what I've got: \n"
-      botResponse = botResponse + image_getter.getList();
+      botResponse = botResponse + image_getter.getList;
     } else if (song_title == "info") {
       botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
       botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
