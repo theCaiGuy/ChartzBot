@@ -367,7 +367,7 @@ url = {
 		},
         {
             "title": "list",
-            "url": "https://i.groupme.com/1036x1522.png.1cf2f6c9b0f04ddcb2e37fae151c5a39"
+            "url": "https://i.groupme.com/1052x1516.png.4c55a50c7d4a4785b285abd78313644e"
         }
 	]
 };
@@ -375,7 +375,7 @@ url = {
 
 module.exports = {
     getList: function() {
-        return "https://i.groupme.com/1036x1522.png.1cf2f6c9b0f04ddcb2e37fae151c5a39";
+        return "https://i.groupme.com/1052x1516.png.4c55a50c7d4a4785b285abd78313644e";
     },
 
     getURL: function(imageName) {
