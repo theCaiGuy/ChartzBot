@@ -387,7 +387,7 @@ module.exports = {
         var possibleURL = "";
         for (var i = 0; i < url.songs.length; i++) {
             if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]\'/g,'') == imageName) return url.songs[i].url;
-            else if (url.songs[i].title.toLowerCase().indexOf(imageName).replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'') != -1) possibleURL = url.songs[i].url;
+            else if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'').indexOf(imageName) != -1) possibleURL = url.songs[i].url;
         }
         return possibleURL;
     }
