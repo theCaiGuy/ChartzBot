@@ -22,7 +22,7 @@ Returns the location of the shak:
 Show me where
 ```
 
-For a ~surprise~:
+For a *surprise*:
 ```
 Show me a surprise
 ```
