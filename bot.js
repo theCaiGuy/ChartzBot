@@ -76,10 +76,10 @@ function handleInfo(body, options) {
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
-  botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
-  botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
+  botResponse = botResponse + "Based on a project by petemcgrath available at http://bit.ly/2Emmyo0\n"
+  botResponse = botResponse + "Source code available at http://bit.ly/2lwhnJB\n"
   botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
-  botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
+  botResponse = botResponse + "For more information visit http://bit.ly/2lpuugx\n"
   body.text = botResponse;
   postMessage(body, options);
 }
@@ -90,6 +90,8 @@ function handleHelp(body, options) {
   botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
   botResponse = botResponse + "\'Show me where\' to find the shak\n"
   botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
+  botResponse = botResponse + "Ensure you are spelling the song title correctly\n";
+  botResponse = botResponse + "For more troubleshooting help contact Wild Card\n"
   body.text = botResponse;
   postMessage(body, options);
 }

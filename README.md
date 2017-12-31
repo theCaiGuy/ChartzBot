@@ -2,33 +2,33 @@
 GroupMe Bot that, once complete, will deliver LSJUMB Altoz charts upon request
 
 # Commands:
-Searches for a chart of your song or uses string ops to try to guess which chart you're looking for
+Searches for a chart of your song using string ops to try to guess which chart you're looking for:
 ```
-Show me [song]
+Show me [song title]
 ```
 
-Returns a list of available chartz
+Returns a list of available chartz:
 ```
 Show me list
 ```
 
-Returns troubleshooting tips
+Returns troubleshooting tips:
 ```
 Show me help
 ```
 
-Returns the location of the shak
+Returns the location of the shak:
 ```
 Show me where
 ```
 
-For a surprise :D
+For a ~surprise~:
 ```
 Show me a surprise
 ```
 
 # Steps for uploading new chartz:
-1. Download PDF chartz from online folder and save to local directory
+1. Download PDF chartz from online folder and save to a local directory
 
 2. Convert all PDF files into jpeg images
 ```
@@ -61,4 +61,4 @@ GroupMe API info: https://dev.groupme.com
 
 Deployed using heroku: https://heroku.com
 
-Starter code courtesy https://github.com/groupme/bot-tutorial-nodejs#get-bot-id
+Starter code courtesy petemcgrath at: https://github.com/groupme/bot-tutorial-nodejs#get-bot-id
