@@ -105,8 +105,8 @@ function handleLocation(body, options) {
   body.text = "Be there or be square";
   body.attachments = [{
     "type" : "location",
-    "lat" : "37.4311483",
-    "lng" : "-122.1615692",
+    "lat" : "37.4315",
+    "lng" : "-122.1615",
     "name" : "Shak"
   }];
   postMessage(body, options);
