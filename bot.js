@@ -45,7 +45,7 @@ function process_request(request) {
       handleHelp(body, options);
     } else if (song_title == "a surprise") {
       handleSurprise(body, options);
-    } else if (song_title == "where to go") {
+    } else if (song_title == "where") {
       handleLocation(body, options);
     } else {
       handleSong(body, options, song_title);
@@ -55,7 +55,7 @@ function process_request(request) {
 
 // "Show me"
 function handleEmpty(body, options) {
-  body.text = "Usage: \'Show me [song title] | help | info | list | where to go\'";
+  body.text = "Usage: \'Show me [song title] | help | info | list | where\'";
   postMessage(body, options);
 }
 
@@ -74,7 +74,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where to go\'\n";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
   botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
@@ -88,7 +88,7 @@ function handleInfo(body, options) {
 function handleHelp(body, options) {
   botResponse = "\'Show me [song title]\' to retrieve the indicated chart\n";
   botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
-  botResponse = botResponse + "\'Show me where to go\' to find the shak\n"
+  botResponse = botResponse + "\'Show me where\' to find the shak\n"
   botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
   body.text = botResponse;
   postMessage(body, options);
@@ -100,7 +100,7 @@ function handleSurprise(body, options) {
   postMessage(body, options);
 }
 
-// "Show me where to go"
+// "Show me where"
 function handleLocation(body, options) {
   body.text = "Be there or be square";
   body.attachments = [{
