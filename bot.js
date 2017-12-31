@@ -63,11 +63,9 @@ function handleEmpty(body, options) {
 
 // "Show me list"
 function handleList(body, options) {
-  var songlist = image_getter.getList();
-  for (var i = 0; i < songlist.length; i++) {
-    body.text = songlist[i];
-    postMessage(body, options);
-  }
+  body.text = "Here's a list of chartz I have: "
+  body.url = image_getter.getList();
+  postMessage(body, options);
 }
 
 // "Show me info"

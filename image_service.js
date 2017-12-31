@@ -5,22 +5,7 @@ const MAX_CHARS = 450;
 
 module.exports = {
     getList: function() {
-		var all_songs = url.songs;
-		var songlist = [];
-		var curr_list = "";
-		all_songs.sort(function(a, b) {
-			return ((x.title === y.title) ? 0 : ((x.title > y.title) ? 1 : -1));
-		});
-		for (var i = 0; i < all_songs.length; i++) {
-			if (curr_list.length + all_songs[i].title.length > 450) {
-				songlist.push(curr_list);
-				curr_list = all_songs[i].title + "\n";
-			} else {
-				curr_list = curr_list + all_songs[i].title + "\n";
-			}
-		}
-		songlist.push(curr_list);
-        return songlist;
+		return "https://i.groupme.com/1066x1528.png.7a430ecaa3524cd4816ce5189e43c095";
     },
 
     getURL: function(imageName) {
