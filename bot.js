@@ -36,45 +36,76 @@ function process_request(request) {
        }
      ]
   };
-  defaultResponse = "Usage: \'Show me <song title> | help | info | list\'";
-
+  
   if (request.text.length <= 8) {
-    botResponse = defaultResponse;
-    song_url = "";
+    handleEmpty(body, options);
   } else {
     song_title = request.text.substring(8);
     if (song_title == "list") {
       handleList(body, options);
     } else if (song_title == "info") {
-      botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
-      botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
-      botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-      botResponse = botResponse + defaultResponse + "\n";
-      botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
-      botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
-      botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
-      botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
-      botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
+      handleInfo(body, options);
     } else if (song_title == "help") {
-      botResponse = "\'Show me <song title>\' to retrieve the indicated chart\n";
-      botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
-      botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
+      handleHelp(body, options);
     } else if (song_title == "a surprise") {
-      botResponse = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
+      handleSurprise(body, options);
     } else {
-      song_url = image_getter.getURL(song_title)
-      if (song_url == "") {
-        botResponse = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
-      } else {
-        botResponse = "Here's your song: " + song_title;
-      }
+      handleSong(body, options, song_title);
     }
   }
 }
 
+// "Show me"
+function handleEmpty(body, options) {
+  body.text = "Usage: \'Show me <song title> | help | info | list\'";
+  postMessage(body, options);
+}
+
+// "Show me list"
 function handleList(body, options) {
   body.text = botResponse = "Choose any chart from this list:\n"
   body.attachments[0].url = image_getter.getList();
+  postMessage(body, options);
+}
+
+// "Show me info"
+function handleInfo(body, options) {
+  botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
+  botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
+  botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
+  botResponse = botResponse + "Usage: \'Show me <song title> | help | info | list\'\n";
+  botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
+  botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
+  botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
+  botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
+  botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
+  body.text = botResponse;
+  postMessage(body, options);
+}
+
+// "Show me help"
+function handleHelp(body, options) {
+  botResponse = "\'Show me <song title>\' to retrieve the indicated chart\n";
+  botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
+  botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
+  body.text = botResponse;
+  postMessage(body, options);
+}
+
+// "Show me a surprise"
+function handleSurprise(body, options) {
+  body.text = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
+  postMessage(body, options);
+}
+
+// "Show me [song title]"
+function handleSong(body, options, song_title) {
+  body.url = image_getter.getURL(song_title)
+  if (body.url == "") {
+    body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
+  } else {
+    body.text = "Here's your song: " + song_title;
+  }
   postMessage(body, options);
 }
 
