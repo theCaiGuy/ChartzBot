@@ -45,6 +45,8 @@ function process_request(request) {
       handleHelp(body, options);
     } else if (song_title == "a surprise") {
       handleSurprise(body, options);
+    } else if (song_title == "where to go") {
+      handleLocation(body, options);
     } else {
       handleSong(body, options, song_title);
     }
@@ -53,7 +55,7 @@ function process_request(request) {
 
 // "Show me"
 function handleEmpty(body, options) {
-  body.text = "Usage: \'Show me [song title] | help | info | list\'";
+  body.text = "Usage: \'Show me [song title] | help | info | list | where to go\'";
   postMessage(body, options);
 }
 
@@ -72,7 +74,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list\'\n";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where to go\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
   botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
@@ -86,6 +88,7 @@ function handleInfo(body, options) {
 function handleHelp(body, options) {
   botResponse = "\'Show me [song title]\' to retrieve the indicated chart\n";
   botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
+  botResponse = botResponse + "\'Show me where to go\' to find the shak\n"
   botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
   body.text = botResponse;
   postMessage(body, options);
@@ -94,6 +97,18 @@ function handleHelp(body, options) {
 // "Show me a surprise"
 function handleSurprise(body, options) {
   body.text = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
+  postMessage(body, options);
+}
+
+// "Show me where to go"
+function handleLocation(body, options) {
+  body.text = "Be there or be square";
+  body.attachments = [{
+    "type" : "location",
+    "lng" : "37.431",
+    "lat" : "-122.161",
+    "name" : "Shak"
+  }];
   postMessage(body, options);
 }
 
