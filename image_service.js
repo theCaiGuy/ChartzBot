@@ -5,19 +5,18 @@ const MAX_CHARS = 450;
 
 module.exports = {
     getList: function() {
+		var all_songs = url.songs;
 		var songlist = [];
 		var curr_list = "";
-		url.songs.sort(function(a, b) {
-			if (a.title.attr < b.title.attr) return -1;
-			else if (a.title.attr < b.title.attr) return 1;
-			return 0;
+		all_songs.sort(function(a, b) {
+			return ((x.title === y.title) ? 0 : ((x.title > y.title) ? 1 : -1));
 		});
-		for (var i = 0; i < url.songs.length; i++) {
-			if (curr_list.length + url.songs[i].title.length > 450) {
+		for (var i = 0; i < all_songs.length; i++) {
+			if (curr_list.length + all_songs[i].title.length > 450) {
 				songlist.push(curr_list);
-				curr_list = url.songs[i].title + "\n";
+				curr_list = all_songs[i].title + "\n";
 			} else {
-				curr_list = curr_list + url.songs[i].title + "\n";
+				curr_list = curr_list + all_songs[i].title + "\n";
 			}
 		}
 		songlist.push(curr_list);
