@@ -6,7 +6,7 @@ const MAX_CHARS = 450;
 module.exports = {
     getList: function() {
 		var songlist = [];
-		var curr_list;
+		var curr_list = "";
 		for (var i = 0; i < url.songs.length; i++) {
 			if (curr_list.length + url.songs[i].title.length > 450) {
 				songlist.push(curr_list);
