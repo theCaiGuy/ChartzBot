@@ -2,7 +2,6 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 var image_getter = require('./image_service.js');
-var location_getter = require('./location_service.js');
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -34,8 +33,6 @@ function process_request(request) {
      ]
   };
 
-  locationRegex = /^to */;
-
   if (request.text.length <= 8) {
     handleEmpty(body, options);
   } else {
@@ -48,8 +45,8 @@ function process_request(request) {
       handleHelp(body, options);
     } else if (song_title == "a surprise") {
       handleSurprise(body, options);
-    } else if (locationRegex.test(song_title)) {
-      handleLocation(body, options, location);
+    } else if (song_title == "where to go") {
+      handleLocation(body, options);
     } else {
       handleSong(body, options, song_title);
     }
@@ -77,7 +74,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | to [location]\'\n";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where to go\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
   botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
@@ -104,13 +101,14 @@ function handleSurprise(body, options) {
 }
 
 // "Show me where to go"
-function handleLocation(body, options, location) {
-  location = location_getter.getLocation(location);
-  if (location == {}) body.text = "Location not found";
-  else {
-    body.text = "Be there or be square";
-    body.attachments = [location];
-  }
+function handleLocation(body, options) {
+  body.text = "Be there or be square";
+  body.attachments = [{
+    "type" : "location",
+    "lat" : "37.4311483",
+    "lng" : "-122.1615692",
+    "name" : "Shak"
+  }];
   postMessage(body, options);
 }
 
