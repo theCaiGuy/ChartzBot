@@ -18,20 +18,33 @@ function respond() {
   }
 }
 
-function postMessage(request) {
+function process_request(request) {
   var botResponse, options, body, botReq, defaultResponse, song_title, song_url;
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
 
+  body = {
+    "bot_id" : botID,
+    "text" : "",
+    "attachments" : [
+       {
+         "type" : "image",
+         "url" : ""
+       }
+     ]
+  };
   defaultResponse = "Usage: \'Show me <song title> | help | info | list\'";
 
   if (request.text.length <= 8) {
     botResponse = defaultResponse;
     song_url = "";
-  }
-  else {
+  } else {
     song_title = request.text.substring(8);
     if (song_title == "list") {
-      botResponse = "Choose any chart from this list:\n"
-      song_url = image_getter.getList();
+      handleList(body, options);
     } else if (song_title == "info") {
       botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
       botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
@@ -57,22 +70,16 @@ function postMessage(request) {
       }
     }
   }
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
+}
 
-  body = {
-    "bot_id" : botID,
-    "text" : botResponse,
-    "attachments" : [
-       {
-         "type" : "image",
-         "url" : song_url
-       }
-     ]
-  };
+function handleList(body, options) {
+  body.text = botResponse = "Choose any chart from this list:\n"
+  body.attachments[0].url = image_getter.getList();
+  postMessage(body, options);
+}
+
+function postMessage(body, options) {
+  var botResponse = body.text;
 
   console.log('sending ' + botResponse + ' to ' + botID);
 
