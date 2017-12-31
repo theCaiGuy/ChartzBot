@@ -33,6 +33,12 @@ function process_request(request) {
        {
          "type" : "image",
          "url" : ""
+       },
+       {
+         "type" : "location",
+         "lng" : "",
+         "lat" : "",
+         "name" : ""
        }
      ]
   };
