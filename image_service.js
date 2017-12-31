@@ -1,5 +1,5 @@
 var fs = require('fs');
-var data = fs.readFileSync('image_links.json');
+var data = fs.readFileSync('./image_links.json');
 var url = JSON.parse(data);
 
 module.exports = {
