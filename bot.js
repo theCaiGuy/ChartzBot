@@ -102,7 +102,7 @@ function handleSong(body, options, song_title) {
     body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
   } else {
     body.text = "Here's your song: " + song_title;
-    body.attachments.push({
+    body.attachments.put({
       "type" : "image",
       "url" : image_url
     });
