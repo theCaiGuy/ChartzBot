@@ -8,7 +8,9 @@ module.exports = {
 		var songlist = [];
 		var curr_list = "";
 		url.songs.sort(function(a, b) {
-			return (a.title) - (b.title);
+			if (a.title.attr < b.title.attr) return -1;
+			else if (a.title.attr < b.title.attr) return 1;
+			return 0;
 		});
 		for (var i = 0; i < url.songs.length; i++) {
 			if (curr_list.length + url.songs[i].title.length > 450) {
