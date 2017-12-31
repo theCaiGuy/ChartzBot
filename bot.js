@@ -64,7 +64,7 @@ function handleEmpty(body, options) {
 // "Show me list"
 function handleList(body, options) {
   body.text = "Here's a list of chartz I have: "
-  body.url = image_getter.getList();
+  body.attachments[0].url = image_getter.getList();
   postMessage(body, options);
 }
 
