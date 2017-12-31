@@ -43,7 +43,7 @@ $ curl https://image.groupme.com/pictures -X "POST" -H "X-Access-Token: [token]"
 
 4. Update the "songs" array in the image_links.json file with your new song and groupme url as follows
 ```
-url = {
+{
     "songs": 
     [
     ...
