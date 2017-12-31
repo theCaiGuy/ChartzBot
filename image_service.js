@@ -7,15 +7,18 @@ module.exports = {
     getList: function() {
 		var songlist = [];
 		var curr_list;
-		for (var i = 0; i < url.songs.length; i++) {
-			if (curr_list.length + url.songs[i].title.length > MAX_CHARS) {
-				songlist.push(curr_list);
-				curr_list = url.songs[i].title;
-			} else {
-				curr_list = curr_list + url.songs[i].title + "\n";
-			}
-		}
-		songlist.push(curr_list);
+		songlist.push("arn");
+		songlist.push("everybody's");
+		songlist.push("she's");
+		//for (var i = 0; i < url.songs.length; i++) {
+		//	if (curr_list.length + url.songs[i].title.length > 450) {
+		//		songlist.push(curr_list);
+		//		curr_list = url.songs[i].title;
+		//	} else {
+		//		curr_list = curr_list + url.songs[i].title + "\n";
+		//	}
+		//}
+		//songlist.push(curr_list);
         return songlist;
     },
 
