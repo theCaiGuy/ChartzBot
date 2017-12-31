@@ -61,6 +61,6 @@ GroupMe API info: https://dev.groupme.com
 
 Deployed using heroku: https://heroku.com
 
-Starter code courtesy of petemcgrath at: https://github.com/groupme/bot-tutorial-nodejs#get-bot-id
+Starter code courtesy of petemcgrath at: https://github.com/groupme/bot-tutorial-nodejs
 
 LSJUMB official website: https://lsjumb.stanford.edu/
