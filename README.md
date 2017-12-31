@@ -17,6 +17,11 @@ Returns troubleshooting tips
 Show me help
 ```
 
+Returns the location of the shak
+```
+Show me where
+```
+
 For a surprise :D
 ```
 Show me a surprise
@@ -36,7 +41,7 @@ $ for filename in *.pdf; do convert -density 300 -depth 8 -quality 85 "$filename
 $ curl https://image.groupme.com/pictures -X "POST" -H "X-Access-Token: [token]" -H "Content-Type: image/[filetype]" --data-binary @[filename]
 ```
 
-4. Update the urls JSON variable in the image_service.js file with your new song and url
+4. Update the "songs" array in the image_links.json file with your new song and groupme url as follows
 ```
 url = {
     "songs": 
