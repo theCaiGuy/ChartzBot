@@ -10,6 +10,7 @@ module.exports = {
 
     getURL: function(imageName) {
         if (imageName.toLowerCase() == "arn") imageName = "All Right Now";
+        if (imageName.toLowerCase() == "fun fun fun") imageName = "Ffun";
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
         imageName = imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
