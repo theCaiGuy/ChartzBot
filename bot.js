@@ -76,10 +76,10 @@ function handleInfo(body, options) {
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
-  botResponse = botResponse + "Based on a project by petemcgrath available at http://bit.ly/2Emmyo0\n"
-  botResponse = botResponse + "Source code available at http://bit.ly/2lwhnJB\n"
+  botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
+  botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
   botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
-  botResponse = botResponse + "For more information visit http://bit.ly/2lpuugx\n"
+  botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
   body.text = botResponse;
   postMessage(body, options);
 }
