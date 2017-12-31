@@ -36,7 +36,7 @@ function process_request(request) {
        }
      ]
   };
-  
+
   if (request.text.length <= 8) {
     handleEmpty(body, options);
   } else {
@@ -57,7 +57,7 @@ function process_request(request) {
 
 // "Show me"
 function handleEmpty(body, options) {
-  body.text = "Usage: \'Show me <song title> | help | info | list\'";
+  body.text = "Usage: \'Show me [song title] | help | info | list\'";
   postMessage(body, options);
 }
 
@@ -73,7 +73,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me <song title> | help | info | list\'\n";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
   botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/GroupmeBotting\n"
@@ -85,7 +85,7 @@ function handleInfo(body, options) {
 
 // "Show me help"
 function handleHelp(body, options) {
-  botResponse = "\'Show me <song title>\' to retrieve the indicated chart\n";
+  botResponse = "\'Show me [song title]\' to retrieve the indicated chart\n";
   botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
   botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
   body.text = botResponse;
@@ -100,8 +100,8 @@ function handleSurprise(body, options) {
 
 // "Show me [song title]"
 function handleSong(body, options, song_title) {
-  body.url = image_getter.getURL(song_title)
-  if (body.url == "") {
+  body.attachments[0].url = image_getter.getURL(song_title)
+  if (body.attachments[0].url == "") {
     body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
   } else {
     body.text = "Here's your song: " + song_title;
