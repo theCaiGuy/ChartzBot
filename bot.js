@@ -30,16 +30,7 @@ function process_request(request) {
     "bot_id" : botID,
     "text" : "",
     "attachments" : [
-       {
-         "type" : "image",
-         "url" : ""
-       },
-       {
-         "type" : "location",
-         "lng" : "",
-         "lat" : "",
-         "name" : ""
-       }
+
      ]
   };
 
@@ -106,11 +97,15 @@ function handleSurprise(body, options) {
 
 // "Show me [song title]"
 function handleSong(body, options, song_title) {
-  body.attachments[0].url = image_getter.getURL(song_title)
+  var image_url = image_getter.getURL(song_title);
   if (body.attachments[0].url == "") {
     body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
   } else {
     body.text = "Here's your song: " + song_title;
+    body.attachments.push({
+      "type" : "image",
+      "url" : image_url
+    });
   }
   postMessage(body, options);
 }
