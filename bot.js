@@ -65,11 +65,11 @@ function handleEmpty(body, options) {
 function handleList(body, options) {
   body.text = "Choose any chart from this list:\n"
   postMessage(body, options);
-  //var songlist = image_getter.getList();
-  //for (var i = 0; i < songlist.length; i ++) {
-  //  body.text = songlist[i];
-  //  postMessage(body, options);
- // }
+  var songlist = ["purple", "gold", "white"];
+  for (var i = 0; i < songlist.length; i++) {
+    body.text = songlist[i];
+    postMessage(body, options);
+  }
 }
 
 // "Show me info"
