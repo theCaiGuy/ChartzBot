@@ -30,7 +30,6 @@ function process_request(request) {
     "bot_id" : botID,
     "text" : "",
     "attachments" : [
-
      ]
   };
 
@@ -61,7 +60,10 @@ function handleEmpty(body, options) {
 // "Show me list"
 function handleList(body, options) {
   body.text = "Here's a list of chartz I have: "
-  body.attachments[0].url = image_getter.getList();
+  body.attachments = [{
+    "type" : "image",
+    "url" : image_getter.getList()
+  }];
   postMessage(body, options);
 }
 
