@@ -63,9 +63,13 @@ function handleEmpty(body, options) {
 
 // "Show me list"
 function handleList(body, options) {
-  body.text = botResponse = "Choose any chart from this list:\n"
-  body.attachments[0].url = image_getter.getList();
+  body.text = "Choose any chart from this list:\n"
   postMessage(body, options);
+  var songlist = image_getter.getList();
+  for (var i = 0; i < songlist.length; i ++) {
+    body.text = songlist[i];
+    postMessage(body, options);
+  }
 }
 
 // "Show me info"

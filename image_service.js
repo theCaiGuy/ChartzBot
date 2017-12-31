@@ -1,10 +1,22 @@
 var fs = require('fs');
 var data = fs.readFileSync('./image_links.json');
 var url = JSON.parse(data);
+const MAX_CHARS = 450;
 
 module.exports = {
     getList: function() {
-        return "https://i.groupme.com/1066x1528.png.7a430ecaa3524cd4816ce5189e43c095";
+		var songlist = [];
+		var curr_list;
+		for (var i = 0; i < url.songs.length; i++) {
+			if (curr_list.length + url.songs[i].title.length > MAX_CHARS) {
+				songlist.push(curr_list);
+				curr_list = url.songs[i].title;
+			} else {
+				curr_list = curr_list + url.songs[i].title + "\n";
+			}
+		}
+		songlist.push(curr_list);
+        return songlist;
     },
 
     getURL: function(imageName) {
@@ -12,7 +24,6 @@ module.exports = {
         imageName = imageName.toLowerCase();
         imageName = imageName.replace(/\s+/g, '');
         imageName = imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
-        //imageName = imageName.replace(/\'/g, '');
         var possibleURL = "";
         for (var i = 0; i < url.songs.length; i++) {
             if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]\'’/g,'') == imageName) return url.songs[i].url;
