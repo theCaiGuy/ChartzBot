@@ -1,5 +1,5 @@
 # Overview:
-GroupMe Bot that, once complete, will deliver LSJUMB Altoz charts upon request
+GroupMe Bot that delivers LSJUMB Altoz charts upon request
 
 # Commands:
 Searches for a chart of your song using string ops to try to guess which chart you're looking for:
