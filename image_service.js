@@ -46,9 +46,15 @@ module.exports = {
             }
         }
         var possible_spellings = [];
+        var seen_urls = [];
         for (var j = 0; j < possible_corrections.length; j++) {
-            if (this.getURL(possible_corrections[j]) != "" && possible_spellings.indexOf(possible_corrections[j]) == -1) {
-                possible_spellings.push(possible_corrections[j]);
+            var possible_name = possible_corrections[j];
+            possible_name = possible_name.toLowerCase();
+            possible_name = possible_name.replace(/\s+/g, '');
+            possible_name = possible_name.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
+            for (var k = 0; k < url.songs.length; k++) {
+                if (url.songs[k].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]\'’/g,'') == possible_name && possible_spellings.indexOf(url.songs[k].title) == -1) possible_spellings.push(url.songs[k].title);
+                else if (url.songs[k].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()’]/g,'').indexOf(possible_name) != -1 && possible_spellings.indexOf(url.songs[k].title) == -1) possible_spellings.push(url.songs[k].title);
             }
         }
         possible_spellings.push("Careless Whisper");
