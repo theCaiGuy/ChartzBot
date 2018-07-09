@@ -5,7 +5,7 @@ const MAX_CHARS = 450;
 
 module.exports = {
     getList: function() {
-		return "https://i.groupme.com/1066x1528.png.7a430ecaa3524cd4816ce5189e43c095";
+		return "https://i.groupme.com/1028x1492.png.2262fcab0f6c490f8eb36780698e24bf";
     },
 
     getURL: function(imageName) {
@@ -20,5 +20,9 @@ module.exports = {
             else if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()’]/g,'').indexOf(imageName) != -1) possibleURL = url.songs[i].url;
         }
         return possibleURL;
-    }
+    },
+
+    // getPossibleSpellings: function(imageName) {
+
+    // }
 };
