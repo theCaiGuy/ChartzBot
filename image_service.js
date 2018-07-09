@@ -22,7 +22,26 @@ module.exports = {
         return possibleURL;
     },
 
-    // getPossibleSpellings: function(imageName) {
+    getPossibleSpellings: function(imageName) {
+        var possible_corrections = [];
+        for (var i = 0; i < imageName.length; i++) {
+            // Check deletions
+            possible_deletion = imageName.substring(0, i) + imageName.substring(i + 1);
+            possible_corrections.push(possible_deletion);
+            // Check letter swap
 
-    // }
+            for (var letter = 'a'; letter < 'z'; letter++) {
+                // Check insertions
+
+                // Check substitutions
+            }
+        }
+        var possible_spellings = [];
+        for (var j = 0; j < possible_corrections.length; j++) {
+            if (this.getURL(possible_corrections[j] != "") {
+                possible_spellings.push(possible_corrections[j]);
+            }
+        }
+        return possible_spellings;
+    }
 };

@@ -118,7 +118,15 @@ function handleLocation(body, options) {
 function handleSong(body, options, song_title) {
   var image_url = image_getter.getURL(song_title);
   if (image_url == "") {
-    body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
+    var possible_spellings = image_getter.getPossibleSpellings(song_title);
+    if (!possible_spellings.length == 0) {
+      body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Did you mean: \n"
+      for (var i = 0; i < possible_spellings.length; i++) {
+        body.text = body.text + possible_spellings[i] + "\n";
+      }
+    } else {
+      body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help.";
+    }
   } else {
     body.text = "Here's your song: " + song_title;
     body.attachments = [{
