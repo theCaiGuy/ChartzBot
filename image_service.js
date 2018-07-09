@@ -23,7 +23,8 @@ module.exports = {
     },
 
     getPossibleSpellings: function(imageName) {
-        // var possible_corrections = [];
+        var possible_corrections = [];
+        possible_corrections.push("Careless Whisper");
         // for (var i = 0; i < imageName.length; i++) {
         //     // Check deletions
         //     possible_deletion = imageName.substring(0, i) + imageName.substring(i + 1);
@@ -36,14 +37,12 @@ module.exports = {
         //         // Check substitutions
         //     }
         // }
-        // var possible_spellings = [];
-        // for (var j = 0; j < possible_corrections.length; j++) {
-        //     if (this.getURL(possible_corrections[j] != "") {
-        //         possible_spellings.push(possible_corrections[j]);
-        //     }
-        // }
         var possible_spellings = [];
-        possible_spellings.push("Careless Whisper");
+        for (var j = 0; j < possible_corrections.length; j++) {
+            if (this.getURL(possible_corrections[j] != "") {
+                possible_spellings.push(possible_corrections[j]);
+            }
+        }
         return possible_spellings;
     }
 };
