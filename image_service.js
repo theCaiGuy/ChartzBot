@@ -30,8 +30,8 @@ module.exports = {
             possible_corrections.push(possible_deletion);
 
             // Check letter swap
-            if (!i == imageName.length - 1) {
-                possible_swap = imageName.substring(0, i) + imageName[i + 1] + imageName[i] + imageName.substring(i + 2);
+            if (i != imageName.length - 1) {
+                possible_swap = imageName.substring(0, i) + imageName.charAt(i + 1) + imageName.charAt(i) + imageName.substring(i + 2);
                 possible_corrections.push(possible_swap);
             }
 
