@@ -37,8 +37,12 @@ module.exports = {
 
             for (var letter = 'a'; letter < 'z'; letter++) {
                 // Check insertions
+                possible_insertion = imageName.substring(0, i) + letter + imageName.substring(i);
+                possible_corrections.push(possible_insertion);
 
                 // Check substitutions
+                possible_substitution = imageName.substring(0, i) + letter + imageName.substring(i + 1);
+                possible_corrections.push(possible_substitution);
             }
         }
         var possible_spellings = [];
