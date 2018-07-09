@@ -35,13 +35,13 @@ module.exports = {
                 possible_corrections.push(possible_swap);
             }
 
-            for (var letter = 'a'; letter < 'z'; letter++) {
+            for (var letter = 0; letter < 26; letter++) {
                 // Check insertions
-                possible_insertion = imageName.substring(0, i) + letter + imageName.substring(i);
+                possible_insertion = imageName.substring(0, i) + (letter + 10).toString(36) + imageName.substring(i);
                 possible_corrections.push(possible_insertion);
 
                 // Check substitutions
-                possible_substitution = imageName.substring(0, i) + letter + imageName.substring(i + 1);
+                possible_substitution = imageName.substring(0, i) + (letter + 10).toString(36) + imageName.substring(i + 1);
                 possible_corrections.push(possible_substitution);
             }
         }
