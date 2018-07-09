@@ -39,7 +39,7 @@ module.exports = {
         // }
         var possible_spellings = [];
         for (var j = 0; j < possible_corrections.length; j++) {
-            if (this.getURL(possible_corrections[j] != "") {
+            if (this.getURL(possible_corrections[j]) != "") {
                 possible_spellings.push(possible_corrections[j]);
             }
         }
