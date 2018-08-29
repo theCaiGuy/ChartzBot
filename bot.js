@@ -49,7 +49,6 @@ function process_request(request) {
       handleLocation(body, options);
     } else if (song_title == "teasers") {
       handleTeasers(body, options);
-    }
     } else {
       handleSong(body, options, song_title);
     }
