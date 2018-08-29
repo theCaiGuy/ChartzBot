@@ -119,10 +119,6 @@ function handleLocation(body, options) {
 
 // "Show me teasers"
 function handleTeasers(body, options) {
-  body.text = "Tease me daddy";
-  postMessage(body, options);
-  body.text = "";
-  sleep(1000);
   var teaser_links = [
     "https://i.groupme.com/1594x1170.png.7d69be0d057b46d996538963de29e56b",
     "https://i.groupme.com/1596x1168.png.bbf31a6b03744690bfa3404a57102a4c",
@@ -136,7 +132,6 @@ function handleTeasers(body, options) {
       "url" : image_url
     }]
     postMessage(body, options);
-    sleep(1000);
   }
 }
 
@@ -180,10 +175,6 @@ function postMessage(body, options) {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
-}
-
-function sleep(time) {
-  return new Promise((resolve) => setTimeout(resolve, time));
 }
 
 
