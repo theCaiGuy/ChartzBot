@@ -101,7 +101,7 @@ function handleHelp(body, options) {
 
 // "Show me a surprise"
 function handleSurprise(body, options) {
-  body.text = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
+  body.text = "https://drive.google.com/file/d/0Bxuq1AeTSJFQdTgyQzRSNjF6LXc/view?usp=sharing";
   postMessage(body, options);
 }
 
