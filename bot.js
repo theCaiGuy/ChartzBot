@@ -57,7 +57,7 @@ function process_request(request) {
 
 // "Show me"
 function handleEmpty(body, options) {
-  body.text = "Usage: \'Show me [song title] | help | info | list | where\'";
+  body.text = "Usage: \'Show me [song title] | help | info | teasers | list | where\'";
   postMessage(body, options);
 }
 
@@ -76,7 +76,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where\'\n";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | list | where\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
   botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/ChartzBot\n"

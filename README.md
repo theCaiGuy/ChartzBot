@@ -12,6 +12,11 @@ Returns a list of available chartz:
 Show me list
 ```
 
+Returns information about the bot:
+```
+Show me info
+```
+
 Returns troubleshooting tips:
 ```
 Show me help
