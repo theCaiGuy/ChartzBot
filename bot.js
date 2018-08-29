@@ -130,9 +130,10 @@ function handleTeasers(body, options) {
     "https://i.groupme.com/1594x1166.png.a2b3f8f0b4cd4057a6ed62a6b4c01890"
   ]
   for (var i = 0; i < teaser_links.length; i++) {
+    image_url = teaser_links[i];
     body.attachments = [{
       "type": "image",
-      "url" : teaser_links[i]
+      "url" : image_url
     }]
     postMessage(body, options);
   }
