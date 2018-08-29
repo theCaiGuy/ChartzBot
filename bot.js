@@ -47,6 +47,9 @@ function process_request(request) {
       handleSurprise(body, options);
     } else if (song_title == "where") {
       handleLocation(body, options);
+    } else if (song_title == "teasers") {
+      handleTeasers(body, options);
+    }
     } else {
       handleSong(body, options, song_title);
     }
@@ -72,7 +75,7 @@ function handleList(body, options) {
 // "Show me info"
 function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"      
+  botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "Usage: \'Show me [song title] | help | info | list | where\'\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
@@ -90,6 +93,7 @@ function handleHelp(body, options) {
   botResponse = botResponse + "\'Show me list\' for a list of all available chartz\n";
   botResponse = botResponse + "\'Show me where\' to find the shak\n"
   botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
+  botResponse = botResponse + "\'Show me teasers\' for teasers\n";
   botResponse = botResponse + "Ensure you are spelling the song title correctly\n";
   botResponse = botResponse + "For more troubleshooting help contact Wild Card\n"
   body.text = botResponse;
@@ -112,6 +116,26 @@ function handleLocation(body, options) {
     "name" : "Shak"
   }];
   postMessage(body, options);
+}
+
+// "Show me teasers"
+function handleTeasers(body, options) {
+  body.text = "Tease me daddy";
+  postMessage(body, options);
+  body.text = "";
+  var teaser_links = [
+    "https://i.groupme.com/1594x1170.png.7d69be0d057b46d996538963de29e56b",
+    "https://i.groupme.com/1596x1168.png.bbf31a6b03744690bfa3404a57102a4c",
+    "https://i.groupme.com/1598x1174.png.baa83bcbef0145c68a4f9675380b54e2",
+    "https://i.groupme.com/1594x1166.png.a2b3f8f0b4cd4057a6ed62a6b4c01890"
+  ]
+  for (var i = 0; i < teaser_links.length; i++) {
+    body.attachments = [{
+      "type": "image",
+      "url" : teaser_links[i]
+    }]
+    postMessage(body, options);
+  }
 }
 
 // "Show me [song title]"
