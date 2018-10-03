@@ -5,7 +5,7 @@ const MAX_CHARS = 450;
 
 module.exports = {
     getList: function() {
-		return "https://i.groupme.com/1028x1492.png.2262fcab0f6c490f8eb36780698e24bf";
+		    return "https://i.groupme.com/1028x1492.png.2262fcab0f6c490f8eb36780698e24bf";
     },
 
     getURL: function(imageName) {

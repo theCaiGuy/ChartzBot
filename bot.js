@@ -120,10 +120,9 @@ function handleLocation(body, options) {
 // "Show me teasers"
 function handleTeasers(body, options) {
   var teaser_links = [
-    "https://i.groupme.com/1594x1170.png.7d69be0d057b46d996538963de29e56b",
-    "https://i.groupme.com/1596x1168.png.bbf31a6b03744690bfa3404a57102a4c",
-    "https://i.groupme.com/1598x1174.png.baa83bcbef0145c68a4f9675380b54e2",
-    "https://i.groupme.com/1594x1166.png.a2b3f8f0b4cd4057a6ed62a6b4c01890"
+    "https://i.groupme.com/1118x794.png.e26b5355f5f54bc198d953b2352f9f5a",
+    "https://i.groupme.com/1102x782.png.a24a75dbf4d8429aa8e5b886623d5603",
+    "https://i.groupme.com/1106x782.png.d153cb1c0f8b408485ed3953810bb8e3",
   ]
   for (var i = 0; i < teaser_links.length; i++) {
     image_url = teaser_links[i];
