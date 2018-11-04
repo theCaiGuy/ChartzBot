@@ -364,10 +364,14 @@
 		{
 			"title": "Higher Ground",
 			"url": "https://i.groupme.com/2250x1650.jpeg.d02f597c762449c69178e386cbc7f952"
-        },
-        {
-            "title": "Careless Whisper",
-            "url": "https://i.groupme.com/850x1100.png.edb821be6ab84f0caca9394b82829178"
-        }
+    },
+		{
+			"title": "Gay Bar",
+			"url": "https://i.groupme.com/1572x1138.png.1ae1d1934e4f4d9f885d6e313eae8792"
+		},
+    {
+      "title": "Careless Whisper",
+    	"url": "https://i.groupme.com/850x1100.png.edb821be6ab84f0caca9394b82829178"
+    }
 	]
 }
