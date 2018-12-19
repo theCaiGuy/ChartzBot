@@ -37,13 +37,19 @@ function process_request(request) {
     handleEmpty(body, options);
   } else {
     song_title = request.text.substring(8);
+    original_input = song_title
+    if (song_title.toLowerCase() == "arn") song_title = "All Right Now";
+    if (song_title.toLowerCase() == "fun fun fun") song_title = "Ffun";
+    song_title = song_title.toLowerCase();
+    song_title = song_title.replace(/\s+/g, '');
+    song_title = song_title.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
     if (song_title == "list") {
       handleList(body, options);
     } else if (song_title == "info") {
       handleInfo(body, options);
     } else if (song_title == "help") {
       handleHelp(body, options);
-    } else if (song_title == "a surprise") {
+    } else if (song_title == "asurprise") {
       handleSurprise(body, options);
     } else if (song_title == "where") {
       handleLocation(body, options);
@@ -51,15 +57,17 @@ function process_request(request) {
       handleTeasers(body, options);
     } else if (song_title == "everything") {
       handleEverything(body, options);
+    } else if (song_title == "audio") {
+      handleAudio(body, options);
     } else {
-      handleSong(body, options, song_title);
+      handleSong(body, options, song_title, original_input);
     }
   }
 }
 
 // "Show me"
 function handleEmpty(body, options) {
-  body.text = "Usage: \'Show me [song title] | help | info | teasers | list | where\'";
+  body.text = "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'";
   postMessage(body, options);
 }
 
@@ -79,7 +87,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | list | where\'\n";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
   botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/ChartzBot\n"
@@ -97,6 +105,7 @@ function handleHelp(body, options) {
   botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
   botResponse = botResponse + "\'Show me teasers\' for teasers\n";
   botResponse = botResponse + "\'Show me everything\' for a link to all chartz\n";
+  botResponse = botResponse + "\'Show me audio\' for a link to old albumz\n";
   botResponse = botResponse + "Ensure you are spelling the song title correctly\n";
   botResponse = botResponse + "For more troubleshooting help contact Wild Card\n";
   body.text = botResponse;
@@ -144,18 +153,26 @@ function handleEverything(body, options) {
   postMessage(body, options);
 }
 
+// "Show me audio"
+function handleAudio(body, options) {
+  body.text = "Old albumz can be found at " + process.env.ALBUM_LINK;
+  postMessage(body, options);
+}
+
 // "Show me [song title]"
-function handleSong(body, options, song_title) {
-  var image_url = image_getter.getURL(song_title);
+function handleSong(body, options, song_title, original_input) {
+  var found_song = image_getter.getURL(song_title);
+  var image_url = found_song[0];
+  var found_title = found_song[1];
   if (image_url == "") {
-    var possible_spellings = image_getter.getPossibleSpellings(song_title);
-    body.text = "Sorry, I couldn't find your chart \'" + song_title + "\'. Did you mean: \n"
+    var possible_spellings = image_getter.getPossibleSpellings(original_input);
+    body.text = "Sorry, I couldn't find your chart \'" + original_input + "\'. Did you mean: \n"
     for (var i = 0; i < possible_spellings.length; i++) {
       body.text = body.text + possible_spellings[i] + "\n";
     }
     body.text = body.text + "Try \'Show me list\' for a list of all the chartz I have or \'Show me help\' for troubleshooting help."
   } else {
-    body.text = "Here's your song: " + song_title;
+    body.text = "Here's your song: " + found_title;
     body.attachments = [{
       "type" : "image",
       "url" : image_url

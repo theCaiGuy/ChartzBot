@@ -9,17 +9,18 @@ module.exports = {
     },
 
     getURL: function(imageName) {
-        if (imageName.toLowerCase() == "arn") imageName = "All Right Now";
-        if (imageName.toLowerCase() == "fun fun fun") imageName = "Ffun";
-        imageName = imageName.toLowerCase();
-        imageName = imageName.replace(/\s+/g, '');
-        imageName = imageName.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
         var possibleURL = "";
+        var possibleTitle = "";
         for (var i = 0; i < url.songs.length; i++) {
-            if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]\'’/g,'') == imageName) return url.songs[i].url;
-            else if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()’]/g,'').indexOf(imageName) != -1) possibleURL = url.songs[i].url;
+            if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]\'’/g,'') == imageName) {
+              return [url.songs[i].url, url.songs[i].title];
+            }
+            else if (url.songs[i].title.toLowerCase().replace(/\s+/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()’]/g,'').indexOf(imageName) != -1) {
+              possibleURL = url.songs[i].url;
+              possibleTitle = url.songs[i].title;
+            }
         }
-        return possibleURL;
+        return [possibleURL, possibleTitle];
     },
 
     getPossibleSpellings: function(imageName) {
