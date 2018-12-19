@@ -49,7 +49,7 @@ function process_request(request) {
       handleLocation(body, options);
     } else if (song_title == "teasers") {
       handleTeasers(body, options);
-    } else if (song_title == "everything")
+    } else if (song_title == "everything") {
       handleEverything(body, options);
     } else {
       handleSong(body, options, song_title);
@@ -65,7 +65,8 @@ function handleEmpty(body, options) {
 
 // "Show me list"
 function handleList(body, options) {
-  body.text = "Here's a list of chartz I have: "
+  body.text = "Here's a list of chartz I have\n";
+  body.text = "All charts can be found at " + process.env.CHART_LINK;
   body.attachments = [{
     "type" : "image",
     "url" : image_getter.getList()
@@ -137,9 +138,9 @@ function handleTeasers(body, options) {
   }
 }
 
+// "Show me everything"
 function handleEverything(body, options) {
-  botResponse = "All charts can be found at " + process.env.CHART_LINK +"\n"
-  body.text = botResponse
+  body.text = "All charts can be found at " + process.env.CHART_LINK;
   postMessage(body, options);
 }
 
