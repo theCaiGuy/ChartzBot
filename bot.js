@@ -49,6 +49,8 @@ function process_request(request) {
       handleLocation(body, options);
     } else if (song_title == "teasers") {
       handleTeasers(body, options);
+    } else if (song_title == "everything")
+      handleEverything(body, options);
     } else {
       handleSong(body, options, song_title);
     }
@@ -93,6 +95,7 @@ function handleHelp(body, options) {
   botResponse = botResponse + "\'Show me where\' to find the shak\n"
   botResponse = botResponse + "\'Show me a surprise\' for a pleasant surprise\n";
   botResponse = botResponse + "\'Show me teasers\' for teasers\n";
+  botResponse = botResponse + "\'Show me everything\' for a link to all chartz\n";
   botResponse = botResponse + "Ensure you are spelling the song title correctly\n";
   botResponse = botResponse + "For more troubleshooting help contact Wild Card\n"
   body.text = botResponse;
@@ -132,6 +135,11 @@ function handleTeasers(body, options) {
     }]
     postMessage(body, options);
   }
+}
+
+function handleEverything(body, options) {
+  body.text = "Link to all chartz: " + process.env.CHART_LINK;
+  postMessage(body, options);
 }
 
 // "Show me [song title]"
