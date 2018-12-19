@@ -97,7 +97,7 @@ function handleHelp(body, options) {
   botResponse = botResponse + "\'Show me teasers\' for teasers\n";
   botResponse = botResponse + "\'Show me everything\' for a link to all chartz\n";
   botResponse = botResponse + "Ensure you are spelling the song title correctly\n";
-  botResponse = botResponse + "For more troubleshooting help contact Wild Card\n"
+  botResponse = botResponse + "For more troubleshooting help contact Wild Card\n";
   body.text = botResponse;
   postMessage(body, options);
 }
@@ -138,7 +138,8 @@ function handleTeasers(body, options) {
 }
 
 function handleEverything(body, options) {
-  body.text = "Link to all chartz: " + process.env.CHART_LINK;
+  botResponse = "All charts can be found at " + process.env.CHART_LINK +"\n"
+  body.text = botResponse
   postMessage(body, options);
 }
 
