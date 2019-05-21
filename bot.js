@@ -59,6 +59,10 @@ function process_request(request) {
       handleEverything(body, options);
     } else if (song_title == "audio") {
       handleAudio(body, options);
+    } else if (song_title == "cuffs") {
+      handleCuffs(body, options);
+    } else if (song_title == "mump") {
+      handleMump(body, options);
     } else {
       handleSong(body, options, song_title, original_input);
     }
@@ -181,6 +185,23 @@ function handleSong(body, options, song_title, original_input) {
   postMessage(body, options);
 }
 
+// "Show me cuffs"
+function handleCuffs(body, options) {
+  body.text = "Look at this BEAUTY";
+  body.attachments = [{
+    "type" : "image",
+    "url" : "https://i.groupme.com/1484x2056.jpeg.e73436c4c34244e9a6a33ce6425edb72"
+  }]
+  postMessage(body, options);
+}
+
+// "Show me mump"
+function handleMump(body, options) {
+  body.text = "Sign this petition! http://chng.it/SKdnt2Vh";
+  postMessage(body, options);
+}
+
+// Post message to groupme API
 function postMessage(body, options) {
   var botResponse = body.text;
 
