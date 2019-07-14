@@ -63,6 +63,8 @@ function process_request(request) {
       handleCuffs(body, options);
     } else if (song_title == "mump") {
       handleMump(body, options);
+    } else if (song_title == "canonical") {
+      handleCanonical(body, options);
     } else {
       handleSong(body, options, song_title, original_input);
     }
@@ -198,6 +200,12 @@ function handleCuffs(body, options) {
 // "Show me mump"
 function handleMump(body, options) {
   body.text = "Sign this petition! http://chng.it/SKdnt2Vh";
+  postMessage(body, options);
+}
+
+// "Show me canonical"
+function handleCanonical(body, options) {
+  body.text = "Canonical";
   postMessage(body, options);
 }
 
