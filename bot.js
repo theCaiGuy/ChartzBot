@@ -56,7 +56,7 @@ function process_request(request) {
         handleSurprise(body, options);
       } else if (song_title == "where") {
         handleLocation(body, options);
-      } else if (song_title == "teasers" || song_title == "teazers" || song_title == "teazerz") {
+      } else if (song_title == "teasers" || song_title == "teazers" || song_title == "teazerz" || song_title == "teaserz") {
         handleTeasers(body, options);
       } else if (song_title == "everything") {
         handleEverything(body, options);
