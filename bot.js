@@ -153,7 +153,7 @@ function handleTeasers(body, options) {
   ]
   for (var i = 0; i < teaser_links.length; i++) {
     image_url = teaser_links[i];
-    body.text = "Teazers!!!"
+    body.text = "Teazers page " + toString(i + 1)
     body.attachments = [{
       "type": "image",
       "url" : image_url
