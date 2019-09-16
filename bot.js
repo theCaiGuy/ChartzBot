@@ -37,37 +37,39 @@ function process_request(request) {
   if (request.text.length <= 8) {
     handleEmpty(body, options);
   } else {
-    song_title = request.text.substring(8);
-    original_input = song_title
-    if (song_title.toLowerCase() == "arn") song_title = "All Right Now";
-    if (song_title.toLowerCase() == "fun fun fun") song_title = "Ffun";
-    song_title = song_title.toLowerCase();
-    song_title = song_title.replace(/\s+/g, '');
-    song_title = song_title.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
-    if (song_title == "list") {
-      handleList(body, options);
-    } else if (song_title == "info") {
-      handleInfo(body, options);
-    } else if (song_title == "help") {
-      handleHelp(body, options);
-    } else if (song_title == "asurprise") {
-      handleSurprise(body, options);
-    } else if (song_title == "where") {
-      handleLocation(body, options);
-    } else if (song_title == "teasers") {
-      handleTeasers(body, options);
-    } else if (song_title == "everything") {
-      handleEverything(body, options);
-    } else if (song_title == "audio") {
-      handleAudio(body, options);
-    } else if (song_title == "cuffs") {
-      handleCuffs(body, options);
-    } else if (song_title == "mump") {
-      handleMump(body, options);
-    } else if (song_title == "canonical") {
-      handleCanonical(body, options);
-    } else {
-      handleSong(body, options, song_title, original_input);
+    raw_song_titles = request.text.substring(8).split(",");
+    for song_title in raw_song_titles {
+      original_input = song_title
+      if (song_title.toLowerCase() == "arn") song_title = "All Right Now";
+      if (song_title.toLowerCase() == "fun fun fun") song_title = "Ffun";
+      song_title = song_title.toLowerCase();
+      song_title = song_title.replace(/\s+/g, '');
+      song_title = song_title.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
+      if (song_title == "list") {
+        handleList(body, options);
+      } else if (song_title == "info") {
+        handleInfo(body, options);
+      } else if (song_title == "help") {
+        handleHelp(body, options);
+      } else if (song_title == "asurprise") {
+        handleSurprise(body, options);
+      } else if (song_title == "where") {
+        handleLocation(body, options);
+      } else if (song_title == "teasers") {
+        handleTeasers(body, options);
+      } else if (song_title == "everything") {
+        handleEverything(body, options);
+      } else if (song_title == "audio") {
+        handleAudio(body, options);
+      } else if (song_title == "cuffs") {
+        handleCuffs(body, options);
+      } else if (song_title == "mump") {
+        handleMump(body, options);
+      } else if (song_title == "canonical") {
+        handleCanonical(body, options);
+      } else {
+        handleSong(body, options, song_title, original_input);
+      }
     }
   }
 }
