@@ -155,18 +155,18 @@ function handleTeasers(body, options) {
         "type": "image",
         "url": "https://i.groupme.com/2222x1624.png.101792173cad4495acf15b06c1df772b",
       },
-      {
-        "type": "image",
-        "url": "https://i.groupme.com/2222x1620.png.013ce87b318a42d39d2a2ef7005dcb14",
-      },
-      {
-        "type": "image",
-        "url": "https://i.groupme.com/2222x1624.png.0560789ceb2e40b9a7526f2177fd7161",
-      },
-      {
-        "type": "image",
-        "url": "https://i.groupme.com/2228x1634.png.8012be04631d4120b822e8330ba387ef",
-      },
+      // {
+      //   "type": "image",
+      //   "url": "https://i.groupme.com/2222x1620.png.013ce87b318a42d39d2a2ef7005dcb14",
+      // },
+      // {
+      //   "type": "image",
+      //   "url": "https://i.groupme.com/2222x1624.png.0560789ceb2e40b9a7526f2177fd7161",
+      // },
+      // {
+      //   "type": "image",
+      //   "url": "https://i.groupme.com/2228x1634.png.8012be04631d4120b822e8330ba387ef",
+      // },
   ]
 }
 
