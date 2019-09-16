@@ -40,12 +40,12 @@ function process_request(request) {
     raw_song_titles = request.text.substring(8).split(",");
     for (let song_title of raw_song_titles) {
       original_input = song_title
-      if (song_title.toLowerCase() == "arn") song_title = "All Right Now";
-      if (song_title.toLowerCase() == "fun fun fun") song_title = "Ffun";
-      if (song_title.toLowerCase() == "avengers") song_title = "avengerz";
       song_title = song_title.toLowerCase();
       song_title = song_title.replace(/\s+/g, '');
       song_title = song_title.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
+      if (song_title.toLowerCase() == "arn") song_title = "allrightnow";
+      if (song_title.toLowerCase() == "funfunfun") song_title = "ffun";
+      if (song_title.toLowerCase() == "avengers") song_title = "avengerz";
       if (song_title == "list") {
         handleList(body, options);
       } else if (song_title == "info") {
