@@ -162,7 +162,7 @@ function handleTeasers(body, options) {
       {
         "type": "image",
         "url": "https://i.groupme.com/1106x782.png.d153cb1c0f8b408485ed3953810bb8e3"
-      }
+      },
   ]
 }
 
