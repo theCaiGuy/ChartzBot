@@ -38,7 +38,7 @@ function process_request(request) {
     handleEmpty(body, options);
   } else {
     raw_song_titles = request.text.substring(8).split(",");
-    for song_title in raw_song_titles {
+    for (let song_title of raw_song_titles) {
       original_input = song_title
       if (song_title.toLowerCase() == "arn") song_title = "All Right Now";
       if (song_title.toLowerCase() == "fun fun fun") song_title = "Ffun";
