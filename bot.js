@@ -139,11 +139,11 @@ function handleLocation(body, options) {
 
 // "Show me teasers"
 function handleTeasers(body, options) {
-  var teaser_links = [
-    "https://i.groupme.com/1118x794.png.e26b5355f5f54bc198d953b2352f9f5a",
-    "https://i.groupme.com/1102x782.png.a24a75dbf4d8429aa8e5b886623d5603",
-    "https://i.groupme.com/1106x782.png.d153cb1c0f8b408485ed3953810bb8e3",
-  ]
+  // var teaser_links = [
+  //   "https://i.groupme.com/1118x794.png.e26b5355f5f54bc198d953b2352f9f5a",
+  //   "https://i.groupme.com/1102x782.png.a24a75dbf4d8429aa8e5b886623d5603",
+  //   "https://i.groupme.com/1106x782.png.d153cb1c0f8b408485ed3953810bb8e3",
+  // ]
   // for (var i = 0; i < teaser_links.length; i++) {
   //   image_url = teaser_links[i];
   //   body.attachments = [{
@@ -157,19 +157,20 @@ function handleTeasers(body, options) {
         "type": "image",
         "url": "https://i.groupme.com/2222x1624.png.101792173cad4495acf15b06c1df772b",
       },
-      // {
-      //   "type": "image",
-      //   "url": "https://i.groupme.com/2222x1620.png.013ce87b318a42d39d2a2ef7005dcb14",
-      // },
-      // {
-      //   "type": "image",
-      //   "url": "https://i.groupme.com/2222x1624.png.0560789ceb2e40b9a7526f2177fd7161",
-      // },
-      // {
-      //   "type": "image",
-      //   "url": "https://i.groupme.com/2228x1634.png.8012be04631d4120b822e8330ba387ef",
-      // },
+      {
+        "type": "image",
+        "url": "https://i.groupme.com/2222x1620.png.013ce87b318a42d39d2a2ef7005dcb14",
+      },
+      {
+        "type": "image",
+        "url": "https://i.groupme.com/2222x1624.png.0560789ceb2e40b9a7526f2177fd7161",
+      },
+      {
+        "type": "image",
+        "url": "https://i.groupme.com/2228x1634.png.8012be04631d4120b822e8330ba387ef",
+      },
   ]
+  postMessage(body, options);
 }
 
 // "Show me everything"
