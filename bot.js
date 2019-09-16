@@ -29,8 +29,7 @@ function process_request(request) {
   body = {
     "bot_id" : botID,
     "text" : "",
-    "attachments" : [
-     ]
+    "attachments" : []
   };
 
   if (request.text.length <= 8) {
@@ -143,14 +142,28 @@ function handleTeasers(body, options) {
     "https://i.groupme.com/1102x782.png.a24a75dbf4d8429aa8e5b886623d5603",
     "https://i.groupme.com/1106x782.png.d153cb1c0f8b408485ed3953810bb8e3",
   ]
-  for (var i = 0; i < teaser_links.length; i++) {
-    image_url = teaser_links[i];
-    body.attachments = [{
-      "type": "image",
-      "url" : image_url
-    }]
-    postMessage(body, options);
-  }
+  // for (var i = 0; i < teaser_links.length; i++) {
+  //   image_url = teaser_links[i];
+  //   body.attachments = [{
+  //     "type": "image",
+  //     "url" : image_url
+  //   }]
+  //   postMessage(body, options);
+  // }
+  body.attachments = [
+      {
+        "type": "image",
+        "url": "https://i.groupme.com/1118x794.png.e26b5355f5f54bc198d953b2352f9f5a"
+      },
+      {
+        "type": "image",
+        "url": "https://i.groupme.com/1102x782.png.a24a75dbf4d8429aa8e5b886623d5603"
+      },
+      {
+        "type": "image",
+        "url": "https://i.groupme.com/1106x782.png.d153cb1c0f8b408485ed3953810bb8e3"
+      }
+  ]
 }
 
 // "Show me everything"
