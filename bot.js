@@ -77,7 +77,8 @@ function process_request(request) {
 
 // "Show me"
 function handleEmpty(body, options) {
-  body.text = "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'";
+  body.text = "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'\n";
+  body.text = body.text + "For multiple requests, separate by commas";
   postMessage(body, options);
 }
 
@@ -98,11 +99,12 @@ function handleInfo(body, options) {
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'";
-  botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n"
-  botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n"
-  botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/ChartzBot\n"
-  botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n"
-  botResponse = botResponse + "For more information visit https://dev.groupme.com/\n"
+  botResponse = botResponse + "For multiple requests, separate by commas\n";
+  botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n";
+  botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n";
+  botResponse = botResponse + "Source code available at https://github.com/theCaiGuy/ChartzBot\n";
+  botResponse = botResponse + "All charts can be found at " + process.env.CHART_LINK +"\n";
+  botResponse = botResponse + "For more information visit https://dev.groupme.com/\n";
   body.text = botResponse;
   postMessage(body, options);
 }
@@ -116,6 +118,7 @@ function handleHelp(body, options) {
   botResponse = botResponse + "\'Show me teasers\' for teasers\n";
   botResponse = botResponse + "\'Show me everything\' for a link to all chartz\n";
   botResponse = botResponse + "\'Show me audio\' for a link to old albumz\n";
+  botResponse = botResponse + "For multiple requests, separate by commas\n";
   botResponse = botResponse + "Ensure you are spelling the song title correctly\n";
   botResponse = botResponse + "For more troubleshooting help contact Wild Card\n";
   body.text = botResponse;
