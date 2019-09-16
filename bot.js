@@ -32,6 +32,8 @@ function process_request(request) {
     "attachments" : []
   };
 
+  console.log("Handling request " + request.text)
+
   if (request.text.length <= 8) {
     handleEmpty(body, options);
   } else {
@@ -52,7 +54,7 @@ function process_request(request) {
       handleSurprise(body, options);
     } else if (song_title == "where") {
       handleLocation(body, options);
-    } else if (song_title == "teasers" || song_title == "teazers" || song_title == "teazerz") {
+    } else if (song_title == "teasers") {
       handleTeasers(body, options);
     } else if (song_title == "everything") {
       handleEverything(body, options);
