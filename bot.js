@@ -42,6 +42,7 @@ function process_request(request) {
       original_input = song_title
       if (song_title.toLowerCase() == "arn") song_title = "All Right Now";
       if (song_title.toLowerCase() == "fun fun fun") song_title = "Ffun";
+      if (song_title.toLowerCase() == "avengers") song_title = "avengerz";
       song_title = song_title.toLowerCase();
       song_title = song_title.replace(/\s+/g, '');
       song_title = song_title.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
