@@ -98,7 +98,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'\n";
   botResponse = botResponse + "For multiple requests, separate by commas\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n";
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n";
