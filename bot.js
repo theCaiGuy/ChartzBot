@@ -208,7 +208,10 @@ function handleCuffs(body, options) {
 
 // "Show me mump"
 function handleMump(body, options) {
-  body.text = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  body.attachments = [{
+    "type" : "image",
+    "url" : "https://i.groupme.com/433x462.png.683979cae2ec42eebf0ad11c12d39c44"
+  }];
   postMessage(body, options);
 }
 
