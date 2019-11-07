@@ -208,7 +208,7 @@ function handleCuffs(body, options) {
 
 // "Show me mump"
 function handleMump(body, options) {
-  body.text = "Sign this petition! http://chng.it/SKdnt2Vh";
+  body.text = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   postMessage(body, options);
 }
 
