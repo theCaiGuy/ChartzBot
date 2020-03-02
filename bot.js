@@ -226,6 +226,7 @@ function handleCanonical(body, options) {
 
 // "Show me the best fucking sexion"
 function handleBestSexion(body, options) {
+  body.text = "Now don't you forget it";
   body.attachments = [{
     "type" : "image",
     "url" : "https://i.groupme.com/2048x1366.jpeg.aed485572983429290b68b483240386f"
