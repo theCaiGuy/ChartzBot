@@ -68,6 +68,8 @@ function process_request(request) {
         handleMump(body, options);
       } else if (song_title == "canonical") {
         handleCanonical(body, options);
+      } else if (song_title == "thebestfuckingsexion" || song_title == "thebestsexion" || song_title == "bestsexion") {
+        handleBestSexion(body, options);
       } else {
         handleSong(body, options, song_title, original_input);
       }
@@ -98,7 +100,7 @@ function handleInfo(body, options) {
   botResponse = "|||||||||||||||||||||||||||||||||||||||||||||\n"
   botResponse = botResponse + "   LSJUMB Altoz Practice Bot   \n"
   botResponse = botResponse + "|||||||||||||||||||||||||||||||||||||||||||||\n"
-  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where\'\n";
+  botResponse = botResponse + "Usage: \'Show me [song title] | help | info | teasers | audio | everything | list | where | the best fucking sexion\'\n";
   botResponse = botResponse + "For multiple requests, separate by commas\n";
   botResponse = botResponse + "Created by Michael Cai using Node.js in December 2017\n";
   botResponse = botResponse + "Based on a project by petemcgrath available at https://github.com/groupme/bot-tutorial-nodejs\n";
@@ -118,6 +120,7 @@ function handleHelp(body, options) {
   botResponse = botResponse + "\'Show me teasers\' for teasers\n";
   botResponse = botResponse + "\'Show me everything\' for a link to all chartz\n";
   botResponse = botResponse + "\'Show me audio\' for a link to old albumz\n";
+  botResponse = botResponse + "\'Show me the best fucking sexion\' just in case you forget\n";
   botResponse = botResponse + "For multiple requests, separate by commas\n";
   botResponse = botResponse + "Ensure you are spelling the song title correctly\n";
   botResponse = botResponse + "For more troubleshooting help contact Wild Card\n";
@@ -218,6 +221,15 @@ function handleMump(body, options) {
 // "Show me canonical"
 function handleCanonical(body, options) {
   body.text = "Canonical";
+  postMessage(body, options);
+}
+
+// "Show me the best fucking sexion"
+function handleBestSexion(body, options) {
+  body.attachments = [{
+    "type" : "image",
+    "url" : "https://i.groupme.com/2048x1366.jpeg.aed485572983429290b68b483240386f"
+  }];
   postMessage(body, options);
 }
 
