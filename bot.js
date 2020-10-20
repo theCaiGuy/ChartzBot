@@ -90,7 +90,8 @@ function process_request(request) {
     "Show me UR MOM",
     "Do you think I'd make a good dollie?",
     "No u :)",
-    "https://drive.google.com/file/d/0Bxuq1AeTSJFQdTgyQzRSNjF6LXc/view?usp=sharing"
+    "https://drive.google.com/file/d/0Bxuq1AeTSJFQdTgyQzRSNjF6LXc/view?usp=sharing",
+    "Wild Card has retired. Please direct all inquiries to Fenr. Thank you."
   ];
 
   body.text = responses[Math.floor(Math.random()*responses.length)];
