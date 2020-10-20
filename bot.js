@@ -91,6 +91,7 @@ function process_request(request) {
     "Do you think I'd make a good dollie?",
     "No u :)",
     "https://drive.google.com/file/d/0Bxuq1AeTSJFQdTgyQzRSNjF6LXc/view?usp=sharing",
+    "https://youtu.be/elOwsJMKS10",
     "Wild Card has retired. Please direct all inquiries to Fenr. Thank you."
   ];
 
