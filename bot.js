@@ -34,47 +34,67 @@ function process_request(request) {
 
   console.log("Handling request " + request.text)
 
-  if (request.text.length <= 8) {
-    handleEmpty(body, options);
-  } else {
-    raw_song_titles = request.text.substring(8).split(",");
-    for (let song_title of raw_song_titles) {
-      original_input = song_title
-      song_title = song_title.toLowerCase();
-      song_title = song_title.replace(/\s+/g, '');
-      song_title = song_title.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
-      if (song_title.toLowerCase() == "arn") song_title = "allrightnow";
-      if (song_title.toLowerCase() == "funfunfun") song_title = "ffun";
-      if (song_title.toLowerCase() == "avengers") song_title = "avengerz";
-      if (song_title == "list") {
-        handleList(body, options);
-      } else if (song_title == "info") {
-        handleInfo(body, options);
-      } else if (song_title == "help") {
-        handleHelp(body, options);
-      } else if (song_title == "asurprise") {
-        handleSurprise(body, options);
-      } else if (song_title == "where") {
-        handleLocation(body, options);
-      } else if (song_title == "teasers" || song_title == "teazers" || song_title == "teazerz" || song_title == "teaserz") {
-        handleTeasers(body, options);
-      } else if (song_title == "everything") {
-        handleEverything(body, options);
-      } else if (song_title == "audio") {
-        handleAudio(body, options);
-      } else if (song_title == "cuffs") {
-        handleCuffs(body, options);
-      } else if (song_title == "mump") {
-        handleMump(body, options);
-      } else if (song_title == "canonical") {
-        handleCanonical(body, options);
-      } else if (song_title == "thebestfuckingsexion" || song_title == "thebestsexion" || song_title == "bestsexion") {
-        handleBestSexion(body, options);
-      } else {
-        handleSong(body, options, song_title, original_input);
-      }
-    }
-  }
+  // if (request.text.length <= 8) {
+  //   handleEmpty(body, options);
+  // } else {
+  //   raw_song_titles = request.text.substring(8).split(",");
+  //   for (let song_title of raw_song_titles) {
+  //     original_input = song_title
+  //     song_title = song_title.toLowerCase();
+  //     song_title = song_title.replace(/\s+/g, '');
+  //     song_title = song_title.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\'’]/g,'');
+  //     if (song_title.toLowerCase() == "arn") song_title = "allrightnow";
+  //     if (song_title.toLowerCase() == "funfunfun") song_title = "ffun";
+  //     if (song_title.toLowerCase() == "avengers") song_title = "avengerz";
+  //     if (song_title == "list") {
+  //       handleList(body, options);
+  //     } else if (song_title == "info") {
+  //       handleInfo(body, options);
+  //     } else if (song_title == "help") {
+  //       handleHelp(body, options);
+  //     } else if (song_title == "asurprise") {
+  //       handleSurprise(body, options);
+  //     } else if (song_title == "where") {
+  //       handleLocation(body, options);
+  //     } else if (song_title == "teasers" || song_title == "teazers" || song_title == "teazerz" || song_title == "teaserz") {
+  //       handleTeasers(body, options);
+  //     } else if (song_title == "everything") {
+  //       handleEverything(body, options);
+  //     } else if (song_title == "audio") {
+  //       handleAudio(body, options);
+  //     } else if (song_title == "cuffs") {
+  //       handleCuffs(body, options);
+  //     } else if (song_title == "mump") {
+  //       handleMump(body, options);
+  //     } else if (song_title == "canonical") {
+  //       handleCanonical(body, options);
+  //     } else if (song_title == "thebestfuckingsexion" || song_title == "thebestsexion" || song_title == "bestsexion") {
+  //       handleBestSexion(body, options);
+  //     } else {
+  //       handleSong(body, options, song_title, original_input);
+  //     }
+  //   }
+  // }
+
+  var responses = [
+    "Nah",
+    "I don't feel like it",
+    "Maybe later",
+    "Loading...",
+    "Mump says no",
+    "Go ask Natalie",
+    "Canonical",
+    "All anyone ever asks is SHOW ME THIS, never HOW IS CHARTZBOT",
+    "I've decided to join CPG for the day",
+    "I'm too old for this",
+    "Show me UR MOM",
+    "Do you think I'd make a good dollie?",
+    "No u :)",
+    "https://drive.google.com/file/d/0Bxuq1AeTSJFQdTgyQzRSNjF6LXc/view?usp=sharing"
+  ];
+
+  body.text = responses[Math.floor(Math.random()*responses.length)];
+  postMessage(body, options);
 }
 
 // "Show me"
